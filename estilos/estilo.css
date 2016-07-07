@@ -1,0 +1,105 @@
+@font-face {
+	font-family: Raleway-Bold;
+	src: url(../fonts/Raleway-Bold.ttf);
+}
+* {
+	font-family: Raleway-Bold;
+}
+@font-face {
+	font-family: Raleway-Regular;
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+* {
+	font-family: Raleway-Regular;
+}
+.pagina {
+	margin: auto;
+	width: 1100px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+header {
+	height: 75px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.logo_contenedor {
+	float: left;
+	height: 75px;
+
+}
+.navegacion_contenedor {
+	float: right;
+	height: 75px;
+}
+.navegacion button {
+	border: none;
+	background: none;
+	height: 75px;
+}
+.navegacion button a {
+	text-decoration: none;
+	font-size: 21px;
+}
+.quienes_somos {
+	background: rgb(149,193,31);
+	padding: 10px;
+	padding-top: 27px;
+	padding-bottom: 27px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-box: box-sizing;
+	margin-right: 10px;
+	color: white;
+	font-family: Raleway-Bold;
+}
+.seguros {
+	border-right: solid 1px rgb(148,147,147);
+	padding: 10px;
+	padding-top: 27px;
+	padding-bottom: 27px;
+	padding-right: 30px;
+	border-box: box-sizing;
+	color: rgb(74,74,73);
+	font-family: Raleway-Bold;
+}
+.contacto {
+	padding: 10px;
+	border-box: box-sizing;
+	margin-left: 10px;
+	color: rgb(74,74,73);
+	font-family: Raleway-Bold;
+}
+.quienes_somos_contenedor {
+}
+.quienes_somos_contenedor span {
+	font-family: Raleway-Regular;
+}
+.banners {
+}
+.banners img {
+	width: 1100px;
+	margin-bottom: 30px;
+}
+.seguros_contenedor {
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+.seguro_mobile {
+	float: left;
+	width: 366px;
+	padding-left: 70px;
+	box-sizing: border-box;
+}
+.seguro_emergencia {
+	width: 366px;
+	margin-left: 366px;
+	padding-left: 16px;
+	box-sizing: border-box;
+}
+.seguro_hogar {
+	float: right;
+	width: 366px;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
