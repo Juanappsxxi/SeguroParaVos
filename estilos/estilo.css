@@ -127,6 +127,7 @@ body {
 	width: 1100px;
 }
 .seguros_contenedor {
+	height: 450px;
 	padding-top: 50px;
 	box-sizing: border-box;
 	margin-top: 20px;
@@ -279,4 +280,81 @@ footer {
 }
 .derechos_apssxxi span {
 	color: rgb(102,102,102);
+}
+
+
+/* PRIMER PASO */
+
+
+.pasos {
+	height: 530px;
+}
+.primer_paso_img img {
+	float: left;
+	margin-left: 72px;
+	padding-right: 96px;
+	box-sizing: border-box;
+	border-right: solid 2px rgb(161,161,161);
+}
+.paso_formulario_routlo {
+	display: inline;
+	text-align: left;
+	margin-left: 100px;
+}
+.paso_formulario_routlo h2 {
+	display: inline-block;
+	margin: 0;
+}
+.paso_formulario_routlo h1 {
+  background: rgb(149,193,31);
+   border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 38px;
+  margin-right: 10px;
+  text-align: center;
+  width: 38px;
+}
+.formulario {
+	display: block;
+	width: 400px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 148px;
+}
+.formulario p {
+	display: inline-block;
+	line-height: 30px;
+	width: 354px;
+}
+#valor_movil {
+	display: inline-block;
+	line-height: 30px;
+	width: 210px;
+}
+.border_bottom {
+	border-bottom: solid 2px rgb(119,119,119);
+}
+.input_radio {
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+}
+.input_number {
+	display: inline-block;
+	height: 26px;
+	width: 145px;
+	border: none;
+	border-bottom: solid 2px rgb(119,119,119);
+	background: rgb(227,227,227);
+}
+.button_next {
+	background: none;
+	border: none;
+}
+.form .fa {
+	font-size: 50px;
+	margin-left: 306px;
 }
