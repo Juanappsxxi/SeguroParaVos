@@ -5,39 +5,72 @@
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="/imagenes/logos/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+	<link rel="stylesheet" type="text/css" href="estilos/font-awesome.min.css">
 </head>
 <body>
-	<div class="pagina">
-		<header>
+	<header>
+		<div class="center">
 			<div class="logo_contenedor">
 				<a href="index.html"><img class="logo" src="imagenes/logos/logo.png"></a>
 			</div>
 			<div class="navegacion_contenedor">
 				<nav class="navegacion">
-					<button><a class="quienes_somos" href="#quienes_somos">Quienes somos</a></button>
+					<button><a class="quienes_somos" href="#">Quienes somos</a></button>
 					<button><a class="seguros" href="#seguros">Seguros</a></button>
 					<button><a class="contacto" href="#">Contacto</a></button>
 				</nav>
 			</div>
-		</header>
-
+		</div>	
+	</header>
+	<div class="center pagina">
 		<section>
-			<div class="quienes_somos_contenedor" id="quienes_somos">
+			<div class="quienes_somos_contenedor">
 				<div class="banners">
 					<img src="imagenes/banners/01.png" usemap="#servicios-express">
 				</div>
 				<span> <strong>www.segurosparavos.com</strong> es una aplicación de (Larraura Seguros) con más de 15 años de experiencia en el mercado asegurador. En forma simple y rapida, <strong>www.segurosparavos.com</strong> fue creada para brindar soluciones innovadoras en la contratación de seguros para vos.</span>
 			</div>
 
+			<img class="sombras" src="imagenes/recursos/sombra-arriba.png">
+
 			<div class="seguros_contenedor" id="seguros">
 				<div class="seguro_mobile">
-					<img src="imagenes/seguros/mobile.png">
+					<img class="seguro_img" src="imagenes/seguros/mobile.png">
+					<br>
+					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Cobertura de Pantalla</span>
+					<br>
+					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Cobertura por robo</span>
+					<br>
+					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Todo riesgo</span>
 				</div>
 				<div class="seguro_emergencia">
-					<img src="imagenes/seguros/emergencia.png">
+					<img class="seguro_img" src="imagenes/seguros/emergencia.png">
+					<br>
+					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span>
+					<br>
+					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Tranquilidad</span>
+					<br>
+					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Home Warranty</span>
 				</div>
 				<div class="seguro_hogar">
-					<img src="imagenes/seguros/hogar.png">
+					<img class="seguro_img" src="imagenes/seguros/hogar.png">
+					<br>
+					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Incendio Edificio*</span>
+					<br>
+					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Incendio Edificio y Contenido*</span>
+					<br>
+					<i id="hogar_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Hogar Seguro</span>
+					<br>
+					<span class="comentario">(incluye robo y daño eléctrico)</span>
+				</div>
+				<p class="comentario_seguros">(*)Todos los seguros incluyen emergencias domiciliarias (cerrajeria, vidriería, electricidad, sanitaria)</p>
+			</div>
+
+			<img class="sombras" src="imagenes/recursos/sombra-abajo.png">
+
+			<div class="pasos_seguro">
+				<div class="rotulo_pasos">
+				<h2>PASOS PARA CONTRATAR TU SEGURO</h2>
 				</div>
 			</div>
 		</section>

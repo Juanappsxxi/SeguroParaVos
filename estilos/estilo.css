@@ -12,25 +12,35 @@
 * {
 	font-family: Raleway-Regular;
 }
-.pagina {
-	margin: auto;
-	width: 1100px;
-	margin-top: 20px;
-	overflow: hidden;
-}
 header {
-	height: 75px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background: rgba(255,255,255,.95);
+	height: 100px;
+	padding-top: 10px;
+	box-sizing: border-box;
 	overflow: hidden;
 	margin-bottom: 20px;
 }
+.center {
+	margin: auto;
+	width: 1100px;
+	overflow: hidden;
+}
+.pagina {
+	margin-top: 100px;
+}
 .logo_contenedor {
 	float: left;
-	height: 75px;
+	height: 80px;
 
 }
 .navegacion_contenedor {
 	float: right;
-	height: 75px;
+	height: px;
 }
 .navegacion button {
 	border: none;
@@ -71,6 +81,7 @@ header {
 	font-family: Raleway-Bold;
 }
 .quienes_somos_contenedor {
+	margin-bottom: 30px;
 }
 .quienes_somos_contenedor span {
 	font-family: Raleway-Regular;
@@ -81,25 +92,75 @@ header {
 	width: 1100px;
 	margin-bottom: 30px;
 }
+.sombras {
+	width: 1100px;
+}
 .seguros_contenedor {
 	padding-top: 50px;
 	box-sizing: border-box;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+.fa {
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: rgb(149,193,31);
+}
+.seguro_span {
+	font-size: 16px;
+}
+.comentario {
+	font-size: 14px;
+	margin-left: 24px;
 }
 .seguro_mobile {
 	float: left;
 	width: 366px;
 	padding-left: 70px;
 	box-sizing: border-box;
+	border-left: solid 1px rgb(148,147,147);
+	margin-bottom: 20px;
+}
+.seguro_img {
+	margin-bottom: 20px;
 }
 .seguro_emergencia {
+	display: inline-block;
 	width: 366px;
-	margin-left: 366px;
-	padding-left: 16px;
+	padding-left: 14px;
 	box-sizing: border-box;
+	border-left: solid 1px rgb(148,147,147);
+	border-right: solid 1px rgb(148,147,147);
+	margin-bottom: 20px;
+}
+#emergencia_fa {
+	margin-left: 10px;
 }
 .seguro_hogar {
 	float: right;
 	width: 366px;
-	padding-left: 10px;
+	padding-left: 61px;
 	box-sizing: border-box;
+	border-right: solid 1px rgb(148,147,147);	
+	margin-bottom: 20px;
+}
+#hogar_fa {
+	margin-bottom: 0;
+}
+.comentario_seguros {
+	text-align: center;
+}
+.pasos_seguro {
+	margin-top: 25px;
+}
+.pasos_seguro h2 {
+	display: inline;
+	padding: 10px;
+	box-sizing: border-box;
+	border: solid 3px rgb(149,193,31);
+	color: rgb(149,193,31);
+}
+.rotulo_pasos {
+	text-align: center;
 }
