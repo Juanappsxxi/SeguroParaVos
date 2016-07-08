@@ -59,6 +59,9 @@ body {
 .hover_negro:hover {
 	color: rgb(74,74,73);
 }
+.hover_blanco:hover {
+	color: rgb(255,255,255);
+}
 .logo_contenedor {
 	float: left;
 	height: 80px;
