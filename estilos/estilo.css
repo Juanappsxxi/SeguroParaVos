@@ -358,3 +358,40 @@ footer {
 	font-size: 50px;
 	margin-left: 306px;
 }
+
+
+/* SEGUNDO PASO*/
+
+
+#valores_segundo_paso {
+	display: inline-block;
+	line-height: 30px;
+	width: 90px;
+}
+.input_number_2 {
+	display: inline-block;
+	height: 26px;
+	width: 264px;
+	border: none;
+	border-bottom: solid 2px rgb(119,119,119);
+	background: rgb(227,227,227);
+}
+.pasos_2 {
+	height: 950px;
+}
+#campo2 {
+	width: 175px;
+}
+#p2{
+	width: 180px;
+}
+#clip {
+	margin: 0;
+	font-size: 30px;
+}
+#condiciones {
+	color: rgb(149,193,31);
+}
+#condiciones:hover {
+	color: rgb(74,74,74);
+}
