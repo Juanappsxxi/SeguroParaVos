@@ -53,6 +53,12 @@ body {
 .pagina {
 	margin-top: 100px;
 }
+.hover_verde:hover {
+	color: rgb(149,193,31);
+}
+.hover_negro:hover {
+	color: rgb(74,74,73);
+}
 .logo_contenedor {
 	float: left;
 	height: 80px;
