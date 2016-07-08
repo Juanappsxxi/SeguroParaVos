@@ -395,3 +395,40 @@ footer {
 #condiciones:hover {
 	color: rgb(74,74,74);
 }
+
+
+/* TERCER PASO */
+
+
+.tercer_paso_img {
+	float: left;
+	margin-left: 72px;
+	padding-right: 96px;
+	box-sizing: border-box;
+	border-right: solid 2px rgb(161,161,161);
+}
+#mobile_contratado {
+	width: 231px;
+	height: 210px;
+}
+.verde {
+	color: rgb(149,193,31);
+}
+.tercer_paso_span {
+	line-height: 40px;
+}
+.separacion {
+	border-bottom: solid 2px rgb(87,87,87);
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-sizing: border-box;
+}
+.gracias {
+	margin-top: 30px;
+}
+.tercer_paso_span strong {
+	font-family: Raleway-Bold;
+}
+.pasos3 {
+	height: 600px;
+}
