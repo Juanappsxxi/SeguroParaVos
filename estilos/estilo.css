@@ -12,6 +12,13 @@
 * {
 	font-family: Raleway-Regular;
 }
+@font-face {
+	font-family: Raleway-Medium;
+	src: url(../fonts/Raleway-Medium.ttf);
+}
+* {
+	font-family: Raleway-Medium;
+}
 header {
 	position: fixed;
 	top: 0;
@@ -25,10 +32,23 @@ header {
 	overflow: hidden;
 	margin-bottom: 20px;
 }
+a {
+	text-decoration: none;
+}
+h3 {
+	text-align: center;
+	font-size: 26px;
+	line-height: 35px;
+	font-family: Raleway-Bold;
+	color: rgb(74,74,73);
+}
 .center {
 	margin: auto;
 	width: 1100px;
 	overflow: hidden;
+}
+body {
+	margin: 0;
 }
 .pagina {
 	margin-top: 100px;
@@ -85,6 +105,7 @@ header {
 }
 .quienes_somos_contenedor span {
 	font-family: Raleway-Regular;
+	font-size: 17px;
 }
 .banners {
 }
@@ -93,6 +114,7 @@ header {
 	margin-bottom: 30px;
 }
 .sombras {
+	margin-bottom: 20px;
 	width: 1100px;
 }
 .seguros_contenedor {
@@ -109,6 +131,7 @@ header {
 }
 .seguro_span {
 	font-size: 16px;
+	font-family: Raleway-Medium;
 }
 .comentario {
 	font-size: 14px;
@@ -151,10 +174,10 @@ header {
 .comentario_seguros {
 	text-align: center;
 }
-.pasos_seguro {
+.pasos_seguro_contenedor {
 	margin-top: 25px;
 }
-.pasos_seguro h2 {
+.pasos_seguro_contenedor h2 {
 	display: inline;
 	padding: 10px;
 	box-sizing: border-box;
@@ -162,5 +185,89 @@ header {
 	color: rgb(149,193,31);
 }
 .rotulo_pasos {
+	height: 42px;
+	margin-bottom: 30px;
 	text-align: center;
+}
+.pasos_seguro {
+}
+.pasos_seguro img {
+	margin-left: 30px;
+	width: 1040px;
+}
+.primer_paso {
+	float: left;
+	width: 320px;
+}
+.segundo_paso {
+	margin-left: 70px;
+	display: inline-block;
+	width: 320px;
+}
+.tercer_paso {
+	float: right;
+	width: 320px;
+}
+.tercer_paso b {
+	color: rgb(149,193,31);
+}
+footer {
+	height: 210px;
+	padding: 60px;
+	box-shizing: border-box;
+	background: rgb(74,74,73);
+	border-bottom: solid 50px rgb(34,34,34);
+}
+.footer_navegacion {
+	height: 140px;
+	border-bottom: solid 2px rgb(101,101,101);
+}
+.footer_nav {
+	float: left;
+	padding-top: 40px;
+}
+.footer_nav a {
+	padding-left: 15px;
+	box-sizing: border-box;
+	font-family: Raleway-Bold;
+	font-size: 18px;
+	color: rgb(255,255,255);
+}
+.borde {
+	border-right: solid 3px rgb(149,193,31);
+	padding-right: 15px;
+	box-sizing: border-box;
+}
+.logo_footer {
+	float: right;
+}
+.derechos_reservados {
+	width: 567px;
+	height: 80px;
+	display: inline-block;
+	margin-top: 20px;
+}
+.derechos_reservados span {
+	float: left;
+	margin-top: 10px;
+	color: rgb(255,255,255);
+}
+.redes_sociales {
+	float: right;
+	margin-top: 25px;
+}
+.redes_sociales .fa {
+	font-size: 40px;
+	margin-right: 20px;
+}
+.derechos_apssxxi {
+	display: inline-block;
+	margin-top: 40px;
+	margin-left: 20%;
+}
+.derechos_apssxxi a {
+	color: rgb(204,0,0);
+}
+.derechos_apssxxi span {
+	color: rgb(102,102,102);
 }

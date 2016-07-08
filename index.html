@@ -15,7 +15,7 @@
 			</div>
 			<div class="navegacion_contenedor">
 				<nav class="navegacion">
-					<button><a class="quienes_somos" href="#">Quienes somos</a></button>
+					<button><a class="quienes_somos" href="#quienes_somos">Quienes somos</a></button>
 					<button><a class="seguros" href="#seguros">Seguros</a></button>
 					<button><a class="contacto" href="#">Contacto</a></button>
 				</nav>
@@ -24,16 +24,16 @@
 	</header>
 	<div class="center pagina">
 		<section>
-			<div class="quienes_somos_contenedor">
+			<div id="quienes_somos" class="quienes_somos_contenedor">
 				<div class="banners">
 					<img src="imagenes/banners/01.png" usemap="#servicios-express">
 				</div>
 				<span> <strong>www.segurosparavos.com</strong> es una aplicación de (Larraura Seguros) con más de 15 años de experiencia en el mercado asegurador. En forma simple y rapida, <strong>www.segurosparavos.com</strong> fue creada para brindar soluciones innovadoras en la contratación de seguros para vos.</span>
 			</div>
 
-			<img class="sombras" src="imagenes/recursos/sombra-arriba.png">
+			<img class="sombras" id="seguros" src="imagenes/recursos/sombra-arriba.png">
 
-			<div class="seguros_contenedor" id="seguros">
+			<div class="seguros_contenedor">
 				<div class="seguro_mobile">
 					<img class="seguro_img" src="imagenes/seguros/mobile.png">
 					<br>
@@ -68,12 +68,50 @@
 
 			<img class="sombras" src="imagenes/recursos/sombra-abajo.png">
 
-			<div class="pasos_seguro">
+			<div class="pasos_seguro_contenedor">
 				<div class="rotulo_pasos">
-				<h2>PASOS PARA CONTRATAR TU SEGURO</h2>
+				<a href="#"><h2>PASOS PARA CONTRATAR TU SEGURO</h2></a>
+				</div>
+				<div class="pasos_seguro">
+					<img src="imagenes/recursos/pasos.png">
+					<div class="primer_paso">
+						<h3>ELEGÍ TU SEGURO Y COTIZALO</h3>
+					</div>
+					<div class="segundo_paso">
+						<h3>INGRESÁ TUS DATOS Y CONTRATALO</h3>
+					</div>
+					<div class="tercer_paso">
+						<h3>CONFIRMÁ TU PAGO Y <b>¡YA ESTÁS ASEGURADO!</b></h3>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<footer>
+			<div class="footer_navegacion">
+				<div class="footer_nav">
+					<a class="borde" href="#quienes_somos">QUIENES SOMOS</a>
+					<a class="borde" href="#seguros">SEGUROS</a>
+					<a href="#">CONTACTO</a>
+				</div>
+				<div class="logo_footer">
+					<a href="index.html"><img src="imagenes/logos/logo-footer.png"></a>
+				</div>
+			</div>
+			<div class="derechos_reservados">
+				<span>© 2016 / SeguroParaVos/Larraura Seguros. Todos los derechos reservados.</span>
+				<span>Términos y condiciones / Declaración de privacidad</span>
+			</div>
+			<div class="redes_sociales">
+				<a class="fa fa-instagram" href="http://www.instagram.com" target="blank"></a>
+				<a class="fa fa-facebook-official" href="http://www.facebook.com" target="blank"></a>
+				<a class="fa fa-twitter" href="http://www.twitter.com" target="blank"></a>
+				<a class="fa fa-youtube-play" href="http://www.youtube.com" target="blank"></a>
+			</div>
+			<div class="derechos_apssxxi">
+				<a href="htttp://www.appsxxi.com">AppsXXI</a><span> - www.seguroparavos.com - Todos los derechos reservados 2016</span>
+			</div>
+		</footer>
 	</div>
 </body>
 </html>
