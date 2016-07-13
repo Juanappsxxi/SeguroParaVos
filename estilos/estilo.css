@@ -443,6 +443,9 @@ footer {
 	color: #333;
 	font-size: 24px;
 }
+.redes_sociales .fa.rounded.hover_blanco:hover {
+	background: #fff;
+}
 .redes_sociales .fa:not(.rounded) {
 	position: relative;
     top: 4px;
