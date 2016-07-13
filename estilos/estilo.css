@@ -1,36 +1,60 @@
 @font-face {
-	font-family: Raleway-Bold;
+	font-family: "Raleway-Regular";
+	src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: "Raleway-Medium";
+	src: url(../fonts/Raleway-Medium.ttf);
+}
+@font-face {
+	font-family: "Raleway-Bold";
 	src: url(../fonts/Raleway-Bold.ttf);
 }
 * {
-	font-family: Raleway-Bold;
+	color: #333;
+	font-family: "Raleway-Regular";
 }
-@font-face {
-	font-family: Raleway-Regular;
-	src: url(../fonts/Raleway-Regular.ttf);
-}
-* {
-	font-family: Raleway-Regular;
-}
-@font-face {
-	font-family: Raleway-Medium;
-	src: url(../fonts/Raleway-Medium.ttf);
-}
-* {
-	font-family: Raleway-Medium;
+body {
+	margin: 0;
+	padding: 100px 0 0;
 }
 header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	background: rgba(255,255,255,.95);
-	height: 100px;
-	padding-top: 10px;
-	box-sizing: border-box;
-	overflow: hidden;
-	margin-bottom: 20px;
+	background: rgba(255, 255, 255, 0.95);
+    box-sizing: border-box;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+a.fa.scroll-up {
+    background: #9c3 none repeat scroll 0 0;
+    bottom: 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
+    display: none;
+    font-size: 24px !important;
+    height: 40px;
+    line-height: 37px !important;
+    opacity: 0.85;
+    position: fixed;
+    right: 50px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    z-index: 100;
+}
+header.compressed {
+	padding: 0;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+header.compressed .logo_contenedor img {
+	height: 40px;
+    margin: 10px 0;
 }
 a {
 	text-decoration: none;
@@ -39,81 +63,62 @@ h3 {
 	text-align: center;
 	font-size: 26px;
 	line-height: 35px;
-	font-family: Raleway-Bold;
-	color: rgb(74,74,73);
+	font-family: "Raleway-Bold";
+	color: #333;
+}
+img {
+	display: block;
 }
 .center {
 	margin: auto;
 	width: 1100px;
 	overflow: hidden;
 }
-body {
-	margin: 0;
-}
-.pagina {
-	margin-top: 100px;
-}
-.hover_verde:hover {
-	color: rgb(149,193,31);
-}
-.hover_negro:hover {
-	color: rgb(74,74,73);
-}
-.hover_blanco:hover {
-	color: rgb(255,255,255);
-}
 .logo_contenedor {
 	float: left;
-	height: 80px;
-
+	transform: all .3s ease;
 }
 .navegacion_contenedor {
 	float: right;
 	height: px;
 }
-.navegacion button {
-	border: none;
-	background: none;
-	height: 75px;
+header.compressed .navegacion a {
+	height: 60px;
+    line-height: 60px;
+    font-size: 18px;
 }
-.navegacion button a {
-	text-decoration: none;
-	font-size: 21px;
+.navegacion a {
+    color: #333;
+    display: inline-block;
+    font-family: "Raleway-Medium";
+    font-size: 21px;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 25px;
+    text-decoration: none;
 }
-.quienes_somos {
-	background: rgb(149,193,31);
-	padding: 10px;
-	padding-top: 27px;
-	padding-bottom: 27px;
-	padding-left: 15px;
-	padding-right: 15px;
-	border-box: box-sizing;
-	margin-right: 10px;
+.navegacion a.activo {
+	background: #9c3;
 	color: white;
-	font-family: Raleway-Bold;
 }
-.seguros {
-	border-right: solid 1px rgb(148,147,147);
-	padding: 10px;
-	padding-top: 27px;
-	padding-bottom: 27px;
-	padding-right: 30px;
-	border-box: box-sizing;
-	color: rgb(74,74,73);
-	font-family: Raleway-Bold;
+.navegacion a.activo:hover {
+	color: #333;
 }
-.contacto {
-	padding: 10px;
-	border-box: box-sizing;
-	margin-left: 10px;
-	color: rgb(74,74,73);
-	font-family: Raleway-Bold;
+.hover_verde:hover {
+	color: #9c3;
 }
+.hover_negro:hover {
+	color: #333;
+}
+.hover_blanco:hover {
+	color: rgb(255,255,255);
+}
+.pagina {}
 .quienes_somos_contenedor {
 	margin-bottom: 30px;
 }
 .quienes_somos_contenedor span {
-	font-family: Raleway-Regular;
+	font-family: "Raleway-Regular";
 	font-size: 17px;
 }
 .banners {
@@ -137,11 +142,11 @@ body {
 	margin-right: 10px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color: rgb(149,193,31);
+	color: #9c3;
 }
 .seguro_span {
 	font-size: 16px;
-	font-family: Raleway-Medium;
+	font-family: "Raleway-Medium";
 }
 .comentario {
 	font-size: 14px;
@@ -182,6 +187,7 @@ body {
 	margin-bottom: 0;
 }
 .comentario_seguros {
+	font-size: 12px;
 	text-align: center;
 }
 .pasos_seguro_contenedor {
@@ -191,8 +197,8 @@ body {
 	display: inline;
 	padding: 10px;
 	box-sizing: border-box;
-	border: solid 3px rgb(149,193,31);
-	color: rgb(149,193,31);
+	border: solid 3px #9c3;
+	color: #9c3;
 }
 .rotulo_pasos {
 	height: 42px;
@@ -219,72 +225,15 @@ body {
 	width: 320px;
 }
 .tercer_paso b {
-	color: rgb(149,193,31);
-}
-footer {
-	height: 210px;
-	padding: 60px;
-	box-shizing: border-box;
-	background: rgb(74,74,73);
-	border-bottom: solid 50px rgb(34,34,34);
-}
-.footer_navegacion {
-	height: 140px;
-	border-bottom: solid 2px rgb(101,101,101);
-}
-.footer_nav {
-	float: left;
-	padding-top: 40px;
-}
-.footer_nav a {
-	padding-left: 15px;
-	box-sizing: border-box;
-	font-family: Raleway-Bold;
-	font-size: 18px;
-	color: rgb(255,255,255);
+	color: #9c3;
 }
 .borde {
-	border-right: solid 3px rgb(149,193,31);
+	border-right: solid 3px #9c3;
 	padding-right: 15px;
 	box-sizing: border-box;
 }
-.logo_footer {
-	float: right;
-}
-.derechos_reservados {
-	width: 567px;
-	height: 80px;
-	display: inline-block;
-	margin-top: 20px;
-}
-.derechos_reservados span {
-	float: left;
-	margin-top: 10px;
-	color: rgb(255,255,255);
-}
-.redes_sociales {
-	float: right;
-	margin-top: 25px;
-}
-.redes_sociales .fa {
-	font-size: 40px;
-	margin-right: 20px;
-}
-.derechos_apssxxi {
-	display: inline-block;
-	margin-top: 40px;
-	margin-left: 20%;
-}
-.derechos_apssxxi a {
-	color: rgb(149,193,31);
-}
-.derechos_apssxxi span {
-	color: rgb(102,102,102);
-}
-
 
 /* PRIMER PASO */
-
 
 .pasos {
 	height: 530px;
@@ -306,15 +255,14 @@ footer {
 	margin: 0;
 }
 .paso_formulario_routlo h1 {
-  background: rgb(149,193,31);
-   border-radius: 0.8em;
-  -moz-border-radius: 0.8em;
-  -webkit-border-radius: 0.8em;
+  background: #9c3;
+  border-radius: 19px;
   color: #ffffff;
   display: inline-block;
-  line-height: 38px;
+  line-height: 34px;
   margin-right: 10px;
   text-align: center;
+  height: 38px;
   width: 38px;
 }
 .formulario {
@@ -390,7 +338,7 @@ footer {
 	font-size: 30px;
 }
 #condiciones {
-	color: rgb(149,193,31);
+	color: #9c3;
 }
 #condiciones:hover {
 	color: rgb(74,74,74);
@@ -412,7 +360,7 @@ footer {
 	height: 210px;
 }
 .verde {
-	color: rgb(149,193,31);
+	color: #9c3;
 }
 .tercer_paso_span {
 	line-height: 40px;
@@ -427,8 +375,68 @@ footer {
 	margin-top: 30px;
 }
 .tercer_paso_span strong {
-	font-family: Raleway-Bold;
+	font-family: "Raleway-Bold";
 }
 .pasos3 {
 	height: 600px;
+}
+
+footer {
+	height: 210px;
+	padding: 60px;
+	background: #333;
+	position: relative;
+}
+.footer_navegacion {
+	height: 140px;
+	border-bottom: solid 2px rgb(101,101,101);
+}
+.footer_nav {
+	float: left;
+	padding-top: 40px;
+}
+.footer_nav a {
+	padding-left: 15px;
+	box-sizing: border-box;
+	font-family: "Raleway-Medium";
+	font-size: 18px;
+	color: rgb(255,255,255);
+}
+.logo_footer {
+	float: right;
+}
+.redes_sociales {
+	float: right;
+	margin-top: 25px;
+}
+.redes_sociales .fa {
+	font-size: 40px;
+	margin-right: 20px;
+}
+.derechos_reservados {
+	background: #222;
+}
+.derechos_reservados span {
+	float: left;
+	font-size: 12px;
+	margin-top: 10px;
+	color: rgb(255,255,255);
+}
+
+.derechos_apssxxi {
+	background: #222;
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+.derechos_apssxxi a {
+	color: #9c3;
+}
+.derechos_apssxxi span {
+	color: rgb(102,102,102);
 }

@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Primer paso</title>
+	<title>Segundo paso</title>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="/imagenes/logos/favicon.png"/>
 	<link rel="stylesheet" type="text/css" href="estilos/estilo.css">
 	<link rel="stylesheet" type="text/css" href="estilos/font-awesome.min.css">
 </head>
-<body>
+<body id="home">
 	<header>
 		<div class="center">
 			<div class="logo_contenedor">
@@ -15,9 +15,9 @@
 			</div>
 			<div class="navegacion_contenedor">
 				<nav class="navegacion">
-					<button><a class="quienes_somos hover_negro" href="index.html #quienes_somos">Quienes somos</a></button>
-					<button><a class="seguros hover_verde" href="index.html #seguros">Seguros</a></button>
-					<button><a class="contacto hover_verde" href="#">Contacto</a></button>
+					<a class="activo hover_negro" href="index.html #quienes_somos">Quienes somos</a>
+					<a class="hover_verde" href="index.html #seguros">Seguros</a>
+					<a class="hover_verde" href="#">Contacto</a>
 				</nav>
 			</div>
 		</div>	
@@ -35,20 +35,32 @@
 
 			<img class="sombras" id="seguros" src="imagenes/recursos/sombra-arriba.png">
 
-			<div class="seguros_contenedor pasos">
+			<div class="seguros_contenedor pasos_2">
 				<div class="primer_paso_img">
 					<img src="imagenes/seguros/mobile.png">
 				</div>
 				<div class="paso_formulario_routlo">
-					<h1>1</h1>
-					<h2>ELEGÍ TU SEGURO Y COTIZALO</h2>
+					<h1>2</h1>
+					<h2>INGRESÁ TUS DATOS Y CONTRATALO</h2>
 				</div>
 				<div class="formulario">
-					<form class="form" action="segundo_paso.html">
-						<p class="border_bottom">Cobertura de Pantalla</p><input class="input_radio" type="checkbox">
-						<p class="border_bottom">Cobertura por Robo</p><input class="input_radio" type="checkbox">
-						<p class="border_bottom">Todo Riesgo</p><input class="input_radio" type="checkbox">
-						<p class="border_bottom" id="valor_movil">Valor del Móvil (USD):</p><input class="input_number" type="number" required>
+					<form class="form" action="paso3.html">
+						<p class="border_bottom" id="valores_segundo_paso">Nombre:</p><input class="input_number_2" type="text" required>
+						<p class="border_bottom" id="valores_segundo_paso">Apellido:</p><input class="input_number_2" type="text" required>
+						<p class="border_bottom" id="valores_segundo_paso">Cedula:</p><input class="input_number_2" type="number" required>
+						<p class="border_bottom" id="valores_segundo_paso">Nº Celular</p><input class="input_number_2" type="number" required>
+						<p class="border_bottom" id="valores_segundo_paso">Marca</p><input class="input_number_2" type="text" required>
+						<p class="border_bottom" id="valores_segundo_paso">Modelo</p><input class="input_number_2" type="text" required>
+						<p class="border_bottom" id="valores_segundo_paso">IMEI</p><input class="input_number_2" type="text" required>
+						<p id="p2" class="border_bottom" id="valores_segundo_paso">Monto asegurado</p><input id="campo2" class="input_number_2" type="number" required>
+						<p id="p2" class="border_bottom" id="valores_segundo_paso">Precio del Seguro</p><input id="campo2" class="input_number_2" type="number" required>
+						<p id="p2" class="border_bottom" id="valores_segundo_paso">Adjuntar Comprobante</p><input id="campo2" class="input_number_2" type="text">
+						<a id="clip" class="fa fa-paperclip" href="#"></a><p class="border_bottom">Acepto <a id="condiciones" href="#">Terminos y Condiciones</a></p><input class="input_radio" type="checkbox" required>
+						<p id="p2" class="border_bottom" id="valores_segundo_paso">Forma de pago</p><input list="formas_pago" name="formas_pago" id="campo2" class="input_number_2" required>
+							<datalist id="formas_pago">
+								<option value="CobrosYa"></option>
+								<option value="Otra Forma"></option>
+							</datalist>	
 						<button class="button_next fa fa-arrow-right" type="sumbit"></button>
 					</form>	
 				</div>
@@ -81,5 +93,9 @@
 			</div>
 		</footer>
 	</div>
+	<a class="scroll-up fa fa-angle-up" href="#home" style="display: inline;"></a>
+
+	<script src="/script/jquery.js"></script>
+	<script src="/script/general.js"></script>
 </body>
 </html>
