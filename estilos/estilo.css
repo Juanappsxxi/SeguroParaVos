@@ -32,7 +32,7 @@ header {
 }
 a.fa.scroll-up {
     background: #9c3 none repeat scroll 0 0;
-    bottom: 50px;
+    bottom: 20px;
     box-sizing: border-box;
     border-radius: 20px;
     color: white;
@@ -42,7 +42,7 @@ a.fa.scroll-up {
     line-height: 37px !important;
     opacity: 0.85;
     position: fixed;
-    right: 50px;
+    right: 20px;
     text-align: center;
     text-decoration: none;
     width: 40px;
@@ -366,7 +366,7 @@ header.compressed .navegacion a {
 	line-height: 40px;
 }
 .separacion {
-	border-bottom: solid 2px rgb(87,87,87);
+	border-bottom: solid 2px #444;
 	padding-top: 30px;
 	padding-bottom: 30px;
 	box-sizing: border-box;
@@ -382,47 +382,71 @@ header.compressed .navegacion a {
 }
 
 footer {
-	height: 210px;
-	padding: 60px;
+	overflow: hidden;
 	background: #333;
+	background: repeating-linear-gradient(
+		125deg,
+		#333,
+		#333 30px,
+		#444 31px
+  	);
+	padding-bottom: 30px;
 	position: relative;
 }
 .footer_navegacion {
-	height: 140px;
-	border-bottom: solid 2px rgb(101,101,101);
+	border-bottom: solid 1px #444;
+	padding: 50px 0;
 }
 .footer_nav {
 	float: left;
-	padding-top: 40px;
+	height: 77px;
+	line-height: 100px;
 }
 .footer_nav a {
-	padding-left: 15px;
 	box-sizing: border-box;
 	font-family: "Raleway-Medium";
 	font-size: 18px;
-	color: rgb(255,255,255);
+	color: #fff;
+}
+.footer_nav .separador {
+	display: inline-block;
+	color: #9c3;
+	padding: 0 15px;
 }
 .logo_footer {
 	float: right;
 }
+.derechos_reservados {
+	float: left;
+	padding: 30px 0;
+}
+.derechos_reservados div {
+	font-size: 14px;
+	color: #888;
+	line-height: 24px;
+}
 .redes_sociales {
 	float: right;
-	margin-top: 25px;
+	padding: 30px 0; 
 }
 .redes_sociales .fa {
-	font-size: 40px;
-	margin-right: 20px;
+	font-size: 38px;
+    text-align: center;
+    margin: 0 0 0 25px;
 }
-.derechos_reservados {
-	background: #222;
+.redes_sociales .fa.rounded {
+	height: 40px;
+	line-height: 42px;
+	width: 40px;	
+	background: #9c3;
+    border-radius: 20px;
+	color: #333;
+	font-size: 24px;
 }
-.derechos_reservados span {
-	float: left;
-	font-size: 12px;
-	margin-top: 10px;
-	color: rgb(255,255,255);
+.redes_sociales .fa:not(.rounded) {
+	position: relative;
+    top: 4px;
 }
-
 .derechos_apssxxi {
 	background: #222;
     bottom: 0;
