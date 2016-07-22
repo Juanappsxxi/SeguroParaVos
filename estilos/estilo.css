@@ -29,7 +29,7 @@ img {
 }
 body {
 	margin: 0;
-	padding: 100px 0 0;
+	padding: 105px 0 0;
 }
 header {
 	background: rgba(255, 255, 255, 0.95);
@@ -68,6 +68,7 @@ header.compressed {
 header.compressed .logo_contenedor img {
 	height: 40px;
     margin: 10px 0;
+    transition: all .2s ease;
 }
 header.compressed .logo_contenedor img.logo {
 	display: none;
@@ -95,16 +96,18 @@ header.compressed .navegacion a {
 	height: 60px;
     line-height: 60px;
     font-size: 18px;
+    transition: all .2s ease;
 }
 .navegacion a {
     color: #333;
     display: inline-block;
     font-family: "Raleway-Medium";
     font-size: 21px;
-    height: 80px;
-    line-height: 80px;
+    height: 85px;
+    line-height: 85px;
     padding: 0 25px;
     text-decoration: none;
+    transition: all .2s ease;
 }
 .navegacion a.activo {
 	background: #9c3;
