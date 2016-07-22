@@ -189,6 +189,12 @@ header.compressed .navegacion a {
 	margin: 0;
 	margin-bottom: 20px;
 }
+.seguros .seguro.seguro_mobile span.fa {
+	font-size: 110px;
+}
+.seguros .seguro.seguro_hogar span.fa {
+	font-size: 95px;
+}
 .seguros .seguro h3 {
 	margin: 0;
 }
