@@ -1,3 +1,4 @@
+/* GENERALES */
 @font-face {
 	font-family: "Raleway-Regular";
 	src: url(../fonts/Raleway-Regular.ttf);
@@ -10,12 +11,20 @@
 	font-family: "Raleway-Bold";
 	src: url(../fonts/Raleway-Bold.ttf);
 }
+@font-face {
+	font-family: "Raleway-ExtraBold";
+	src: url(../fonts/Raleway-ExtraBold.ttf);
+}
 * {
 	color: #333;
 	font-family: "Raleway-Regular";
 }
+strong {
+	font-family: "Raleway-Medium";
+}
 a {
 	text-decoration: none;
+	font-family: "Raleway-Medium";
 }
 h3 {
 	text-align: center;
@@ -31,6 +40,41 @@ body {
 	margin: 0;
 	padding: 105px 0 0;
 }
+
+/* UTILES */
+.clear {
+	overflow: hidden;
+	clear: both;
+}
+.center {
+	margin: auto;
+	width: 1100px;
+	overflow: hidden;
+}
+.hover_verde:hover {
+	color: #9c3;
+}
+.hover_negro:hover {
+	color: #333;
+}
+.hover_blanco:hover {
+	color: rgb(255,255,255);
+}
+.btn {
+	border: 2px solid #9c3;
+    box-sizing: border-box;
+    color: #9c3;
+    display: block;
+    padding: 10px;
+}
+.fa {
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #9c3;
+}
+
+/* ENCABEZADO */
 header {
 	background: rgba(255, 255, 255, 0.95);
     box-sizing: border-box;
@@ -43,24 +87,35 @@ header {
     z-index: 10;
     transition: all 0.2s ease;
 }
-a.fa.scroll-up {
-    background: #9c3 none repeat scroll 0 0;
-    bottom: 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    color: white;
-    display: none;
-    font-size: 24px !important;
-    height: 40px;
-    line-height: 37px !important;
-    opacity: 0.85;
-    position: fixed;
-    right: 20px;
-    text-align: center;
-    text-decoration: none;
-    width: 40px;
-    z-index: 100;
+header .logo_contenedor {
+	float: left;
+	transform: all .3s ease;
 }
+header .logo_contenedor img.logo_solo {
+	display: none;
+}
+header .navegacion_contenedor {
+	float: right;
+}
+header .navegacion a {
+    color: #333;
+    display: inline-block;
+    font-size: 21px;
+    height: 85px;
+    line-height: 85px;
+    padding: 0 25px;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+header .navegacion a.activo {
+	background: #9c3;
+	color: white;
+}
+header .navegacion a.activo:hover {
+	color: #333;
+}
+
+/* ENCABEZADO FIJO */
 header.compressed {
 	padding: 0;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -76,89 +131,109 @@ header.compressed .logo_contenedor img.logo {
 header.compressed .logo_contenedor img.logo_solo {
 	display: block;
 }
-.center {
-	margin: auto;
-	width: 1100px;
-	overflow: hidden;
-}
-.logo_contenedor {
-	float: left;
-	transform: all .3s ease;
-}
-.logo_contenedor img.logo_solo {
-	display: none;
-}
-.navegacion_contenedor {
-	float: right;
-	height: px;
-}
 header.compressed .navegacion a {
 	height: 60px;
     line-height: 60px;
     font-size: 18px;
     transition: all .2s ease;
 }
-.navegacion a {
-    color: #333;
-    display: inline-block;
-    font-family: "Raleway-Medium";
-    font-size: 21px;
-    height: 85px;
-    line-height: 85px;
-    padding: 0 25px;
-    text-decoration: none;
-    transition: all .2s ease;
-}
-.navegacion a.activo {
-	background: #9c3;
-	color: white;
-}
-.navegacion a.activo:hover {
-	color: #333;
-}
-.hover_verde:hover {
-	color: #9c3;
-}
-.hover_negro:hover {
-	color: #333;
-}
-.hover_blanco:hover {
-	color: rgb(255,255,255);
-}
+
+/* BODY */
 .pagina {}
+
+/* Quienes somos */
 .quienes_somos_contenedor {
 	margin-bottom: 30px;
 }
-.quienes_somos_contenedor span {
-	font-family: "Raleway-Regular";
-	font-size: 17px;
-}
-.banners {
-}
+/* Banner */
+.banners {}
 .banners img {
 	width: 1100px;
 	margin-bottom: 30px;
 }
-.sombras {
-	margin-bottom: 20px;
-	width: 1100px;
-}
+
+/* Seguros */
 .seguros_contenedor {
-	height: 450px;
-	padding-top: 50px;
-	box-sizing: border-box;
-	margin-top: 20px;
-	margin-bottom: 60px;
+    margin-bottom: 30px;
 }
-.fa {
-	margin-right: 10px;
-	margin-top: 10px;
-	margin-bottom: 10px;
+.seguros {
+	box-shadow: 0 0 130px -100px rgba(0, 0, 0, .6);
+	margin-bottom: 30px;
+}
+.seguros .clear {
+	padding: 40px 0 0;
+}
+.seguros .seguro {
+	position: relative;
+	float: left;
+    width: 33.33%;
+    height: 440px;
+    box-sizing: border-box;
+    border-left: solid 1px #333;
+    border-right: solid 1px #333;
+    text-align: center;
+}
+.seguros .seguro:first-child {
+	border-right: none;
+}
+.seguros .seguro:last-child {
+	border-left: none;
+}
+.seguros .seguro span.fa.rounded {
+	color: #fff;
+	background: #9c3;
+	width: 150px;
+	height: 150px;
+	line-height: 160px;
+	border-radius: 75px;
+	margin: 0;
+	margin-bottom: 20px;
+}
+.seguros .seguro h3 {
+	margin: 0;
+}
+.seguros .seguro h3.titulo-seguro {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.seguros .seguro h3.titulo-seguro span {
+	font-family: "Raleway-Regular";
+}
+.seguros .seguro h3.titulo-seguro strong {
 	color: #9c3;
+	font-family: "Raleway-Bold";
 }
+.seguros .seguro ul {
+    margin: 0;
+	list-style: none;
+    padding: 0 30px 0 55px;
+    text-align: left;
+    font-size: 18px;
+}
+.seguros .seguro ul li {}
+.seguros .seguro ul li i {}
+.seguros .seguro ul li .comentario {
+	font-size: 12px;
+    left: 25px;
+    position: relative;
+    top: -10px;
+}
+.seguros .seguro .btn {
+	bottom: 0;
+    left: -50%;
+    margin-left: 65%;
+    position: absolute;
+    width: 70%;
+}
+.seguros .comentario_seguros {
+	font-size: 12px;
+	text-align: center;
+	margin: 40px 0;
+}
+
+/*
 .seguro_span {
 	font-size: 16px;
-	font-family: "Raleway-Medium";
 }
 .comentario {
 	font-size: 14px;
@@ -198,10 +273,9 @@ header.compressed .navegacion a {
 #hogar_fa {
 	margin-bottom: 0;
 }
-.comentario_seguros {
-	font-size: 12px;
-	text-align: center;
-}
+*/
+
+/* Proceso pasos para contratar */
 .pasos_seguro_contenedor {
 	margin-top: 25px;
 }
@@ -217,8 +291,7 @@ header.compressed .navegacion a {
 	margin-bottom: 30px;
 	text-align: center;
 }
-.pasos_seguro {
-}
+.pasos_seguro {}
 .pasos_seguro img {
 	margin-left: 30px;
 	width: 1040px;
@@ -386,9 +459,6 @@ header.compressed .navegacion a {
 .gracias {
 	margin-top: 30px;
 }
-.tercer_paso_span strong {
-	font-family: "Raleway-Bold";
-}
 .pasos3 {
 	height: 600px;
 }
@@ -416,7 +486,6 @@ footer {
 }
 .footer_nav a {
 	box-sizing: border-box;
-	font-family: "Raleway-Medium";
 	font-size: 18px;
 	color: #fff;
 }
@@ -478,4 +547,24 @@ footer {
 }
 .derechos_apssxxi span {
 	color: rgb(102,102,102);
+}
+
+/* SCROLL UP */
+a.fa.scroll-up {
+    background: #9c3 none repeat scroll 0 0;
+    bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: white;
+    display: none;
+    font-size: 24px !important;
+    height: 40px;
+    line-height: 37px !important;
+    opacity: 0.85;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    z-index: 100;
 }

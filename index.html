@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/estilos/estilo.css">
 	<link rel="stylesheet" type="text/css" href="/estilos/font-awesome.min.css">
 </head>
+
 <body id="home">
 	<header>
 		<div class="center">
@@ -24,73 +25,77 @@
 		</div>	
 	</header>
 
-	<div class="center pagina">
-		
-		<section>
-			<div id="quienes_somos" class="quienes_somos_contenedor">
-				<div class="banners">
-					<img src="imagenes/banners/01.png" usemap="#servicios-express">
-				</div>
-				<span> <strong>www.segurosparavos.com</strong> es una aplicación de (Larraura Seguros) con más de 15 años de experiencia en el mercado asegurador. En forma simple y rapida, <strong>www.segurosparavos.com</strong> fue creada para brindar soluciones innovadoras en la contratación de seguros para vos.</span>
+	<section class="pagina">
+		<div id="quienes_somos" class="center quienes_somos_contenedor">
+			<div class="banners">
+				<img src="imagenes/banners/01.png" usemap="#servicios-express">
 			</div>
+			<p><strong>www.segurosparavos.com</strong> es una aplicación de (Larraura Seguros) con más de 15 años de experiencia en el mercado asegurador. En forma simple y rapida, <strong>www.segurosparavos.com</strong> fue creada para brindar soluciones innovadoras en la contratación de seguros para vos.</p>
+		</div>
 
-			<img class="sombras" id="seguros" src="imagenes/recursos/sombra-arriba.png">
-
-			<div class="seguros_contenedor">
-				<div class="seguro_mobile">
-					<a href="paso1.html"><img class="seguro_img" src="imagenes/seguros/mobile.png"></a>
-					<br>
-					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Cobertura de Pantalla</span>
-					<br>
-					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Cobertura por robo</span>
-					<br>
-					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Todo riesgo</span>
-				</div>
-				<div class="seguro_emergencia">
-					<img class="seguro_img" src="imagenes/seguros/emergencia.png">
-					<br>
-					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span>
-					<br>
-					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Tranquilidad</span>
-					<br>
-					<i id="emergencia_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Home Warranty</span>
-				</div>
-				<div class="seguro_hogar">
-					<img class="seguro_img" src="imagenes/seguros/hogar.png">
-					<br>
-					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Incendio Edificio*</span>
-					<br>
-					<i class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Incendio Edificio y Contenido*</span>
-					<br>
-					<i id="hogar_fa" class="fa fa-check-circle" aria-hidden="true"></i><span class="seguro_span">Hogar Seguro</span>
-					<br>
-					<span class="comentario">(incluye robo y daño eléctrico)</span>
+		<div class="seguros_contenedor">
+			<div class="center seguros">
+				<div class="clear">
+					<div class="seguro seguro_mobile">
+						<span class="fa fa-5x fa-mobile rounded"></span>
+						<h3 class="titulo-seguro">
+							<span>Seguro</span><strong>Móvil</strong>
+						</h3>
+						<ul>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura de Pantalla</span></li>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura por robo</span></li>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Todo riesgo</span></li>
+						</ul>
+						<a href="/" class="btn">Contratar</a>
+					</div>
+					<div class="seguro seguro_emergencia">
+						<span class="fa fa-5x fa-bullhorn rounded"></span>
+						<h3 class="titulo-seguro">
+							<span>Seguro</span><strong>Emergencia</strong>
+						</h3>
+						<ul>
+							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span></li>
+							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Tranquilidad</span></li>
+							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Home Warranty</span></li>
+						</ul>
+						<a href="/" class="btn">Contratar</a>
+					</div>
+					<div class="seguro seguro_hogar">
+						<span class="fa fa-5x fa-home rounded"></span>
+						<h3 class="titulo-seguro">
+							<span>Seguro</span><strong>Hogar</strong>
+						</h3>
+						<ul>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio*</span></li>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio y Contenido*</span></li>
+							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Hogar Seguro*</span><br><span class="comentario">(incluye robo y daño eléctrico)</span></li>
+						</ul>
+						<a href="/" class="btn">Contratar</a>
+					</div>
 				</div>
 				<p class="comentario_seguros">(*) Todos los seguros incluyen emergencias domiciliarias (cerrajeria, vidriería, electricidad, sanitaria)</p>
 			</div>
+		</div>
 
-			<img class="sombras" src="imagenes/recursos/sombra-abajo.png">
-
-			<div class="pasos_seguro_contenedor">
-				<div class="rotulo_pasos">
-				<h2>PASOS PARA CONTRATAR TU SEGURO</h2>
+		<div class="center pasos_seguro_contenedor">
+			<div class="rotulo_pasos">
+			<h2>PASOS PARA CONTRATAR TU SEGURO</h2>
+			</div>
+			<div class="pasos_seguro">
+				<img src="imagenes/recursos/pasos.png">
+				<div class="primer_paso">
+					<h3>ELEGÍ TU SEGURO Y COTIZALO</h3>
 				</div>
-				<div class="pasos_seguro">
-					<img src="imagenes/recursos/pasos.png">
-					<div class="primer_paso">
-						<h3>ELEGÍ TU SEGURO Y COTIZALO</h3>
-					</div>
-					<div class="segundo_paso">
-						<h3>INGRESÁ TUS DATOS Y CONTRATALO</h3>
-					</div>
-					<div class="tercer_paso">
-						<h3>CONFIRMÁ TU PAGO Y <b>¡YA ESTÁS ASEGURADO!</b></h3>
-					</div>
+				<div class="segundo_paso">
+					<h3>INGRESÁ TUS DATOS Y CONTRATALO</h3>
+				</div>
+				<div class="tercer_paso">
+					<h3>CONFIRMÁ TU PAGO Y <b>¡YA ESTÁS ASEGURADO!</b></h3>
 				</div>
 			</div>
-		</section>
+		</div>
+	</section>
 
-	</div>
 	<footer>
 		<div class="footer_navegacion center">
 			<div class="footer_nav">
@@ -120,6 +125,7 @@
 			<a class="hover_blanco" href="htttp://www.appsxxi.com">AppsXXI</a><span> - www.seguroparavos.com - Todos los derechos reservados 2016</span>
 		</div>
 	</footer>
+
 	<a class="scroll-up fa fa-angle-up" href="#home" style="display: inline;"></a>
 
 	<script src="/script/jquery.js"></script>
