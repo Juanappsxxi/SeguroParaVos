@@ -16,7 +16,7 @@
 	src: url(../fonts/Raleway-ExtraBold.ttf);
 }
 * {
-	color: #333;
+	color: #666;
 	font-family: "Raleway-Regular";
 }
 strong {
@@ -26,12 +26,32 @@ a {
 	text-decoration: none;
 	font-family: "Raleway-Medium";
 }
+h2 {
+	display: inline-block;
+	clear: both;
+	color: #9c3;
+	border: 2px solid #9c3;
+	padding: 8px 10px;
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 20px;
+}
 h3 {
 	text-align: center;
 	font-size: 26px;
 	line-height: 35px;
 	font-family: "Raleway-Bold";
-	color: #333;
+	color: #666;
+}
+h4 {
+	color: #9c3;
+    margin: 0;
+    padding: 0 10px;
+}
+p {
+	padding: 0 10px;
+	margin: 0 0 20px;
+	font-size: 14px;
 }
 img {
 	display: block;
@@ -47,15 +67,19 @@ body {
 	clear: both;
 }
 .center {
+	position: relative;
 	margin: auto;
 	width: 1100px;
 	/*overflow: hidden;*/
+}
+.content-inner {
+	padding: 30px 0;
 }
 .hover_verde:hover {
 	color: #9c3;
 }
 .hover_negro:hover {
-	color: #333;
+	color: #666;
 }
 .hover_blanco:hover {
 	color: rgb(255,255,255);
@@ -96,6 +120,19 @@ body {
 	transform: scale(1, -1);
 }
 .mirror img {}
+.site-title {
+	text-transform: uppercase;
+}
+.site-title .seguro {
+	font-family: 'Raleway-Bold';
+}
+.site-title .para {
+	font-family: 'Raleway-Regular';
+}
+.site-title .vos {
+	font-family: 'Raleway-Bold';
+	color: #9c3;
+}
 
 /* ENCABEZADO */
 header {
@@ -121,13 +158,14 @@ header .navegacion_contenedor {
 	float: right;
 }
 header .navegacion a {
-    color: #333;
+    color: #666;
     display: inline-block;
-    font-size: 21px;
+    font-size: 18px;
     height: 85px;
     line-height: 85px;
     padding: 0 25px;
     text-decoration: none;
+    text-transform: uppercase;
     transition: all .2s ease;
 }
 header .navegacion a.activo {
@@ -135,7 +173,7 @@ header .navegacion a.activo {
 	color: white;
 }
 header .navegacion a.activo:hover {
-	color: #333;
+	color: #666;
 }
 
 /* ENCABEZADO FIJO */
@@ -157,7 +195,7 @@ header.compressed .logo_contenedor img.logo_solo {
 header.compressed .navegacion a {
 	height: 60px;
     line-height: 60px;
-    font-size: 18px;
+    font-size: 16px;
     transition: all .2s ease;
 }
 
@@ -218,8 +256,8 @@ header.compressed .navegacion a {
     width: 33.334%;
     height: 440px;
     box-sizing: border-box;
-    border-left: solid 1px #333;
-    border-right: solid 1px #333;
+    border-left: solid 1px #666;
+    border-right: solid 1px #666;
     text-align: center;
 }
 .seguros .seguro:first-child {
@@ -406,6 +444,32 @@ header.compressed .navegacion a {
 	box-sizing: border-box;
 }*/
 
+.nosotros {
+	position: relative;
+	margin-bottom: 30px;
+}
+.nosotros .sombra {
+	background: #FFF;
+    border-radius: 50%;
+    bottom: 25%;
+    /*box-shadow: 0 0 180px 60px;*/
+    -webkit-box-shadow: 0 0 70px 50px;
+    left: 15%;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+}
+/* Hiperfix for darknes shadow in firefox */
+@-moz-document url-prefix() { 
+    .nosotros .sombra {
+        box-shadow: 0 0 70px 25px;
+    }
+}
+.nosotros .content-inner {
+	position: relative;
+	background: #fff;
+}
+
 /* PRIMER PASO */
 
 .pasos {
@@ -553,7 +617,7 @@ header.compressed .navegacion a {
 
 footer {
 	overflow: hidden;
-	background: #333;
+	background: #666;
 	background: repeating-linear-gradient(
 		125deg,
 		#333,
@@ -574,8 +638,9 @@ footer {
 }
 .footer_nav a {
 	box-sizing: border-box;
-	font-size: 18px;
+	font-size: 16px;
 	color: #fff;
+	text-transform: uppercase;
 }
 .footer_nav .separador {
 	display: inline-block;
