@@ -35,79 +35,97 @@
 
 		<div class="seguros_contenedor">
 			<div class="center seguros">
-				<div class="clear">
-					<div class="seguro seguro_mobile">
-						<span class="fa fa-5x fa-mobile rounded"></span>
-						<h3 class="titulo-seguro">
-							<span>Seguro</span><strong>Móvil</strong>
-						</h3>
-						<ul>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura de Pantalla</span></li>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura por robo</span></li>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Todo riesgo</span></li>
-						</ul>
-						<a href="/" class="btn">Contratar</a>
+				<div class="sombra"></div>
+				<div class="seguros_inner">
+					<div class="clear">
+						<div class="seguro seguro_mobile">
+							<span class="fa fa-5x fa-mobile rounded"></span>
+							<h3 class="titulo-seguro">
+								<span>Seguro</span><strong>Móvil</strong>
+							</h3>
+							<ul>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura de Pantalla</span></li>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura por robo</span></li>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Todo riesgo</span></li>
+							</ul>
+							<a href="/" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
+						</div>
+						<div class="seguro seguro_emergencia">
+							<span class="fa fa-5x fa-bullhorn rounded"></span>
+							<h3 class="titulo-seguro">
+								<span>Seguro</span><strong>Emergencia</strong>
+							</h3>
+							<ul>
+								<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span></li>
+								<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Tranquilidad</span></li>
+								<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Home Warranty</span></li>
+							</ul>
+							<a href="/" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
+						</div>
+						<div class="seguro seguro_hogar">
+							<span class="fa fa-5x fa-home rounded"></span>
+							<h3 class="titulo-seguro">
+								<span>Seguro</span><strong>Hogar</strong>
+							</h3>
+							<ul>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio*</span></li>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio y Contenido*</span></li>
+								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Hogar Seguro*</span><br><span class="comentario">(incluye robo y daño eléctrico)</span></li>
+							</ul>
+							<a href="/" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
+						</div>
 					</div>
-					<div class="seguro seguro_emergencia">
-						<span class="fa fa-5x fa-bullhorn rounded"></span>
-						<h3 class="titulo-seguro">
-							<span>Seguro</span><strong>Emergencia</strong>
-						</h3>
-						<ul>
-							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span></li>
-							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Tranquilidad</span></li>
-							<li><i id="emergencia_fa" class="fa fa-check-circle"></i><span class="seguro_span">Home Warranty</span></li>
-						</ul>
-						<a href="/" class="btn">Contratar</a>
-					</div>
-					<div class="seguro seguro_hogar">
-						<span class="fa fa-5x fa-home rounded"></span>
-						<h3 class="titulo-seguro">
-							<span>Seguro</span><strong>Hogar</strong>
-						</h3>
-						<ul>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio*</span></li>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio y Contenido*</span></li>
-							<li><i class="fa fa-check-circle"></i><span class="seguro_span">Hogar Seguro*</span><br><span class="comentario">(incluye robo y daño eléctrico)</span></li>
-						</ul>
-						<a href="/" class="btn">Contratar</a>
-					</div>
+					<p class="comentario_seguros">(*) Todos los seguros incluyen emergencias domiciliarias (cerrajeria, vidriería, electricidad, sanitaria)</p>
 				</div>
-				<p class="comentario_seguros">(*) Todos los seguros incluyen emergencias domiciliarias (cerrajeria, vidriería, electricidad, sanitaria)</p>
 			</div>
 		</div>
 
 		<div class="center pasos_seguro_contenedor">
-			<div class="rotulo_pasos">
-			<h2>PASOS PARA CONTRATAR TU SEGURO</h2>
-			</div>
+			<h2 class="rotulo_pasos">Pasos para contratar tu seguro</h2>
 			<div class="pasos_seguro">
-				<img src="imagenes/recursos/pasos.png">
-				<div class="primer_paso">
-					<h3>ELEGÍ TU SEGURO Y COTIZALO</h3>
+				<!-- <img src="imagenes/recursos/pasos.png"> -->
+				<div class="paso primer_paso">
+					<span class="fa rounded">1 <span class="fa fa-check-circle"></span></span>
+					<h3 class="titulo-seguro">
+						<span>Elegí tu seguro</span>
+					</h3>
 				</div>
-				<div class="segundo_paso">
-					<h3>INGRESÁ TUS DATOS Y CONTRATALO</h3>
+				<span class="connect"><img src="/imagenes/recursos/flecha-design.png"></span>
+				<div class="paso segundo_paso">
+					<span class="fa rounded">2 <span class="fa fa-check-circle"></span></span>
+					<h3 class="titulo-seguro">
+						<span>Ingresá tus datos y contratalo</span>
+					</h3>
 				</div>
-				<div class="tercer_paso">
-					<h3>CONFIRMÁ TU PAGO Y <b>¡YA ESTÁS ASEGURADO!</b></h3>
+				<span class="connect mirror"><img src="/imagenes/recursos/flecha-design.png"></span>
+				<div class="paso tercer_paso">
+					<span class="fa rounded">3 <span class="fa fa-check-circle"></span></span>
+					<h3 class="titulo-seguro">
+						<span>Confirmá tu pago y<br><strong>¡ya estás asegurado!</strong></span>
+					</h3>
 				</div>
+				<div class="clear"></div>
 			</div>
+		</div>
+
+		<div class="center">
+			
 		</div>
 	</section>
 
 	<footer>
 		<div class="footer_navegacion center">
 			<div class="footer_nav">
-				<a class="hover_verde" href="#quienes_somos">QUIENES SOMOS</a>
+				<a class="hover_verde" href="#nosotros">Quiénes somos</a>
 				<span class="separador">|</span>
-				<a class="hover_verde" href="#seguros">SEGUROS</a>
+				<a class="hover_verde" href="#razones">Por qué elegirnos</a>
 				<span class="separador">|</span>
 				<a class="hover_verde"href="#">CONTACTO</a>
 			</div>
 			<div class="logo_footer">
 				<a href="/"><img src="imagenes/logos/logo-footer.png"></a>
 			</div>
+			<div class="clear"></div>
 		</div>
 		<div class="center">
 			<div class="derechos_reservados">

@@ -49,7 +49,7 @@ body {
 .center {
 	margin: auto;
 	width: 1100px;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .hover_verde:hover {
 	color: #9c3;
@@ -66,6 +66,12 @@ body {
     color: #9c3;
     display: block;
     padding: 10px;
+    text-transform: uppercase;
+}
+.btn .fa {
+	font-size: 18px;
+	margin: 0;
+	margin-left: 10px;
 }
 .fa {
 	margin-right: 10px;
@@ -73,6 +79,23 @@ body {
 	margin-bottom: 10px;
 	color: #9c3;
 }
+.connect {
+	display: block;
+    left: 22%;
+    position: absolute;
+    top: 5%;
+    z-index: 5;
+	box-sizing: content-box;
+}
+.connect img {
+	width: 80%;
+}
+.mirror {
+	top: 20%;
+	left: 55%;
+	transform: scale(1, -1);
+}
+.mirror img {}
 
 /* ENCABEZADO */
 header {
@@ -145,6 +168,7 @@ header.compressed .navegacion a {
 .quienes_somos_contenedor {
 	margin-bottom: 30px;
 }
+
 /* Banner */
 .banners {}
 .banners img {
@@ -155,18 +179,43 @@ header.compressed .navegacion a {
 /* Seguros */
 .seguros_contenedor {
     margin-bottom: 30px;
+    position: relative;
 }
 .seguros {
-	box-shadow: 0 0 130px -100px rgba(0, 0, 0, .6);
 	margin-bottom: 30px;
+	position: relative;
 }
 .seguros .clear {
 	padding: 40px 0 0;
 }
-.seguros .seguro {
+.seguros .seguros_inner {
+	background: rgba(255, 255, 255, .99);
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    position: relative;
+}
+.seguros .sombra {
+	background: #FFF;
+    border-radius: 50%;
+    bottom: 25%;
+    /*box-shadow: 0 0 180px 60px;*/
+    -webkit-box-shadow: 0 0 180px 60px;
+    left: 15%;
+    position: absolute;
+    right: 15%;
+    top: 25%;
+}
+/* Hiperfix for darknes shadow in firefox */
+@-moz-document url-prefix() { 
+    .seguros .sombra {
+        box-shadow: 0 0 180px 15px;
+    }
+}
+.seguros .seguro,
+.pasos_seguro .paso {
 	position: relative;
 	float: left;
-    width: 33.33%;
+    width: 33.334%;
     height: 440px;
     box-sizing: border-box;
     border-left: solid 1px #333;
@@ -179,7 +228,8 @@ header.compressed .navegacion a {
 .seguros .seguro:last-child {
 	border-left: none;
 }
-.seguros .seguro span.fa.rounded {
+.seguros .seguro span.fa.rounded,
+.pasos_seguro .paso span.fa.rounded {
 	color: #fff;
 	background: #9c3;
 	width: 150px;
@@ -189,23 +239,26 @@ header.compressed .navegacion a {
 	margin: 0;
 	margin-bottom: 20px;
 }
-.seguros .seguro.seguro_mobile span.fa {
+.seguros .seguro.seguro_mobile > span.fa {
 	font-size: 110px;
 }
-.seguros .seguro.seguro_hogar span.fa {
+.seguros .seguro.seguro_hogar > span.fa {
 	font-size: 95px;
 }
 .seguros .seguro h3 {
 	margin: 0;
 }
-.seguros .seguro h3.titulo-seguro {
+.seguros .seguro h3.titulo-seguro,
+.pasos_seguro .paso h3.titulo-seguro {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
-.seguros .seguro h3.titulo-seguro span {
+.seguros .seguro h3.titulo-seguro span,
+.pasos_seguro .paso h3.titulo-seguro span {
 	font-family: "Raleway-Regular";
 }
-.seguros .seguro h3.titulo-seguro strong {
+.seguros .seguro h3.titulo-seguro strong,
+.pasos_seguro .paso h3.titulo-seguro strong {
 	color: #9c3;
 	font-family: "Raleway-Bold";
 }
@@ -226,10 +279,11 @@ header.compressed .navegacion a {
 }
 .seguros .seguro .btn {
 	bottom: 0;
+    display: inline-block;
     left: -50%;
-    margin-left: 65%;
+    margin-left: 80%;
     position: absolute;
-    width: 70%;
+    width: 40%;
 }
 .seguros .comentario_seguros {
 	font-size: 12px;
@@ -284,25 +338,53 @@ header.compressed .navegacion a {
 /* Proceso pasos para contratar */
 .pasos_seguro_contenedor {
 	margin-top: 25px;
+	text-align: center;
 }
 .pasos_seguro_contenedor h2 {
-	display: inline;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: auto;
 	padding: 10px;
 	box-sizing: border-box;
 	border: solid 3px #9c3;
+	margin-bottom: 30px;
 	color: #9c3;
 }
-.rotulo_pasos {
-	height: 42px;
+.pasos_seguro {
+	position: relative;
 	margin-bottom: 30px;
-	text-align: center;
 }
-.pasos_seguro {}
-.pasos_seguro img {
+.pasos_seguro .paso {
+	border: none;
+	height: auto;
+	width: 33.33%;
+}
+.pasos_seguro .paso > .fa {
+	position: relative;
+    font-size: 90px;
+    font-family: 'Raleway-Bold';
+    line-height: 130px!important;
+}
+.pasos_seguro .paso > .fa > .fa-check-circle {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    color: #666;
+    display: block;
+    font-size: 60px;
+    height: 50px;
+    line-height: 52px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 50px;
+}
+/*.pasos_seguro img {
 	margin-left: 30px;
 	width: 1040px;
-}
-.primer_paso {
+}*/
+/*.primer_paso {
 	float: left;
 	width: 320px;
 }
@@ -322,7 +404,7 @@ header.compressed .navegacion a {
 	border-right: solid 3px #9c3;
 	padding-right: 15px;
 	box-sizing: border-box;
-}
+}*/
 
 /* PRIMER PASO */
 
