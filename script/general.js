@@ -8,6 +8,9 @@ $(document).on('ready', function() {
 	// centerColumnsWhenLessThan3();
 
 	if(document.location.hash != '') {
+		$('header .navegacion').find('a.activo').removeClass('activo');
+		$('header .navegacion').find('a[href=' + document.location.hash + ']').addClass('activo');
+		
 		setTimeout(function() {
 			// reseteo el scroll top
 			$('html, body').scrollTop(0);
@@ -38,18 +41,9 @@ $(document).on('ready', function() {
 		$('header .navegacion').find('a.activo').removeClass('activo');
 		$('header .navegacion').find('a[href=' + $this.attr('href') + ']').addClass('activo');
 
-		var just_once = false;
 		$('html, body').animate({
 			scrollTop: $('#' + $this.attr('href').replace('#', '')).offset().top - ($this.attr('href') != '#home' ? 72 : 120)
-		}, 500, function() {
-			// if($this.attr('href') == '#nosotros') {
-			// 	if($this.data('type') && $this.data('type') == 'solicitud') {
-			// 		$('.contacto').find('form > input[name=nombre]').focus();
-			// 		$('.contacto').find('form > textarea[name=mensaje]').val($this.data('message').replaceAll('#BR#', "\n"));
-			// 	}
-			// }
-			console.log(document.location.hash);
-		});
+		}, 500);
 
 		document.location.hash = $this.attr('href');
 		return false;
