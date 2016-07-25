@@ -10,13 +10,13 @@ $(document).on('ready', function() {
 	if(document.location.hash != '') {
 		$('header .navegacion').find('a.activo').removeClass('activo');
 		$('header .navegacion').find('a[href=' + document.location.hash + ']').addClass('activo');
-		
+
 		setTimeout(function() {
 			// reseteo el scroll top
 			$('html, body').scrollTop(0);
 			// Lo envio al hash que viene por url
 			$('html, body').animate({
-				scrollTop: $('#' + document.location.hash.replace('#', '')).offset().top - (document.location.hash != '#home' ? 72 : 120)
+				scrollTop: $('#_' + document.location.hash.replace('#', '')).offset().top - (document.location.hash != '#home' ? 50 : 80)
 			}, 500);
 		}, 50);
 	}
@@ -28,7 +28,7 @@ $(document).on('ready', function() {
 		if($this.attr('href') == '#') return false;
 
 		try {
-			$('#' + $this.attr('href').replace('#', ''));
+			$('#_' + $this.attr('href').replace('#', ''));
 		} catch(e) {
 			if($this.attr('target')) {
 				window.open($this.attr('href'), $this.attr('target'));
@@ -42,7 +42,7 @@ $(document).on('ready', function() {
 		$('header .navegacion').find('a[href=' + $this.attr('href') + ']').addClass('activo');
 
 		$('html, body').animate({
-			scrollTop: $('#' + $this.attr('href').replace('#', '')).offset().top - ($this.attr('href') != '#home' ? 72 : 120)
+			scrollTop: $('#_' + $this.attr('href').replace('#', '')).offset().top - ($this.attr('href') != '#home' ? 50 : 80)
 		}, 500);
 
 		document.location.hash = $this.attr('href');
