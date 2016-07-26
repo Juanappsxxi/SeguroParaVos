@@ -212,10 +212,24 @@ header.compressed .navegacion a {
 }
 
 /* Banner */
-.banners {}
-.banners img {
-	width: 1100px;
+.slider-banner {
 	margin-bottom: 30px;
+	overflow: hidden;
+    position: relative;
+}
+.slider-banner ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+    width: 20000em;
+}
+.slider-banner ul li {
+	float: left;
+}
+.slider-banner img {
+	display: block;
+	width: 1100px;
 }
 
 /* Seguros */
@@ -470,6 +484,31 @@ header.compressed .navegacion a {
     }
 }
 .nosotros .content-inner {
+	position: relative;
+	background: #fff;
+}
+
+.razones {
+	position: relative;
+	margin-bottom: 30px;
+}
+.razones .sombra {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 5%;
+    -webkit-box-shadow: 0 0 70px 30px;
+    left: 10%;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+}
+/* Hiperfix for darknes shadow in firefox */
+@-moz-document url-prefix() { 
+    .razones .sombra {
+        box-shadow: 0 0 70px 20px;
+    }
+}
+.razones .content-inner {
 	position: relative;
 	background: #fff;
 }

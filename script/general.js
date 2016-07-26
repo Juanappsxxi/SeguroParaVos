@@ -7,6 +7,36 @@ $(document).on('ready', function() {
 	// setZebraBackgrounds();
 	// centerColumnsWhenLessThan3();
 
+	// Slideshow de banners
+	$('#slider-banner').jcarousel({
+		transitions: {
+	        transforms3d: true,
+	        easing:       'ease'
+	    }
+	});
+
+	// Auto empezar slider
+	jcarouselAutostart();
+	function jcarouselAutostart() {
+		// lo hago recursivo
+		window.carouselTimer = setTimeout(function() {
+			var $carouselVisible = $('#slider-banner').jcarousel('visible');
+			var carouselIndex    = $carouselVisible.index();
+
+			if(carouselIndex < $carouselVisible.parent().find('> li').length -1) {
+				$('#slider-banner').jcarousel('scroll', carouselIndex +1, true, function() {
+					jcarouselAutostart();
+					updatePagination();
+				});
+			} else {
+				$('#slider-banner').jcarousel('scroll', 0, true, function() {
+					jcarouselAutostart();
+					updatePagination();
+				});
+			}
+		}, 3000);
+	}
+
 	if(document.location.hash != '') {
 		$('header .navegacion').find('a.activo').removeClass('activo');
 		$('header .navegacion').find('a[href=' + document.location.hash + ']').addClass('activo');
@@ -124,6 +154,7 @@ $(document).on('ready', function() {
 
 $(window).on('scroll', function(e) {
 	showScrollUpCommand();
+	// selectNavLinkByScrol();
 });
 
 function showScrollUpCommand() {
@@ -135,6 +166,29 @@ function showScrollUpCommand() {
 		$('a.scroll-up').fadeOut();
 	}
 }
+
+// function selectNavLinkByScrol() {
+// 	// console.log($(window).scrollTop());
+// 	$('header .navegacion').find('a').each(function() {
+// 		// console.log($(this).attr('href'));
+// 		// console.log($(this).attr('href').replace('#', '#_'));
+// 		if($(this).attr('href').indexOf('/') == -1) {
+// 			// console.log($($(this).attr('href').replace('#', '#_')));
+// 			if($($(this).attr('href').replace('#', '#_')).length) {
+// 				// console.log($($(this).attr('href').replace('#', '#_')).offset().top);
+// 				// console.log($($(this).attr('href').replace('#', '#_')).height());
+// 				if($(window).scrollTop() >= $($(this).attr('href').replace('#', '#_')).offset().top - 100 && $(window).scrollTop() < ($($(this).attr('href').replace('#', '#_')).height() + $($(this).attr('href').replace('#', '#_')).offset().top)) {
+// 					$('header .navegacion').find('a').removeClass('activo');
+// 					$(this).addClass('activo');
+// 					document.location.hash = $(this).attr('href');
+// 				}
+// 				if($(window).scrollTop() <= $($(this).attr('href').replace('#', '#_')).offset().top - 100) {
+// 					$(this).removeClass('activo');
+// 				}
+// 			}
+// 		}
+// 	});
+// }
 
 // function setZebraBackgrounds() {
 // 	$('.contenido-principal').each(function(index, item) {
