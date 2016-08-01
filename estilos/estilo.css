@@ -1,5 +1,12 @@
 /* GENERALES */
 @font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.5.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.5.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.5.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.5.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
 	font-family: "Raleway-Light";
 	src: url(../fonts/Raleway-Light.ttf);
 }
@@ -70,6 +77,15 @@ body {
 	overflow: hidden;
 	clear: both;
 }
+.no-padding	{
+	padding: 0 !important;
+}
+.no-margin {
+	margin: 0 !important;
+}
+.no-border {
+	border: 0 !important;
+}
 .center {
 	position: relative;
 	margin: auto;
@@ -138,6 +154,90 @@ body {
 	color: #9c3;
 }
 
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+  cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  width: 100%;
+  position: relative;
+  cursor: default;
+  box-sizing: border-box;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  font-family: FontAwesome;
+  content: '\f00c';
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 18px;
+  background: #9c3;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+[type="checkbox"]:not(:checked) + label:before {
+  font-size: 12px;
+  background: #ddd;
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #000;
+  transition: all .2s ease;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #999;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border-color: #9c3;
+}
+
+/* hover style just for information */
+label:hover:before {
+  line-height: 30px!important;
+  border-color: #8c2!important;
+}
+
+
 /* ENCABEZADO */
 header {
 	background: rgba(255, 255, 255, 0.95);
@@ -163,14 +263,17 @@ header .logo_contenedor img.logo_solo {
 }
 header .navegacion_contenedor {
 	float: right;
+	padding: 10px 0;
 }
 header .navegacion a {
+	border-left: 1px solid #ddd;
     color: #666;
-    display: inline-block;
+    display: block;
+    float: left;
     font-size: 18px;
-    height: 85px;
-    line-height: 85px;
-    padding: 0 15px;
+    height: 65px;
+    line-height: 65px;
+    padding: 0 18px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .2s ease;
@@ -183,7 +286,7 @@ header .navegacion a.activo:hover {
 	color: #666;
 }
 header .navegacion a.fa {
-	line-height: 86px;
+	line-height: 65px;
 	margin: 0;
 }
 
@@ -202,6 +305,9 @@ header.compressed .logo_contenedor img.logo {
 }
 header.compressed .logo_contenedor img.logo_solo {
 	display: block;
+}
+header.compressed .navegacion_contenedor {
+	padding: 0;
 }
 header.compressed .navegacion a {
 	height: 60px;
@@ -313,6 +419,7 @@ header.compressed .navegacion a.fa {
 .seguros .seguro.seguro_hogar > span.fa {
 	font-size: 95px;
 }
+.pasos_seguro .paso h3,
 .seguros .seguro h3 {
 	margin: 0;
 }
@@ -556,30 +663,67 @@ header.compressed .navegacion a.fa {
 	border: none;
     padding: 0;
 }
+.content-inner form .left-side-title {
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    padding: 0 50px;
+    text-align: center;
+    width: 300px;
+}
 .content-inner form .left-side-icon {
+	margin: 0 0 20px;
 	background: #9c3;
     border-radius: 100px;
     color: #fff;
-    display: block;
-    float: left;
     font-size: 90px;
     height: 200px;
     line-height: 200px;
-    margin: 0 50px;
-    text-align: center;
     width: 200px;
 }
-.content-inner form .right-side-inputs {
-	width: 750px;
-	float: left;
-	border: none;
-    padding: 0;
+.content-inner form .left-side-icon.fa-mobile {
+	font-size: 130px;
 }
-.content-inner form .form-inputs {}
+.content-inner form .left-side-title h3 {
+	font-family: "Raleway-Regular";
+	margin: 0;
+    text-transform: uppercase;
+}
+.content-inner form .left-side-title h3 strong {
+	font-family: "Raleway-Bold";
+	color: #9c3;
+}
+.content-inner form .right-side-inputs {
+	border: none;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 50px;
+}
+
+.content-inner form .form-inputs {
+	width: 800px;
+}
 .content-inner form .form-inputs .form-line {
 	border-bottom: 2px solid #999;
 	overflow: hidden;
 }
+.content-inner form .form-inputs .form-line h3 {
+	color: #9c3;
+    font-family: "Raleway-Medium";
+    text-transform: uppercase;
+    text-align: left;
+}
+.content-inner form .form-inputs .form-line p {
+	font-size: 16px;
+    line-height: 28px;
+    padding: 0;
+}
+.content-inner form .form-inputs .form-line strong {
+	color: #9c3;
+	text-transform: uppercase;
+}
+
 .content-inner form .form-inputs .form-line.input-text {}
 .content-inner form .form-inputs .form-line label {
 	float: left;
@@ -587,7 +731,24 @@ header.compressed .navegacion a.fa {
 	height: 45px;
 	line-height: 45px;
 }
-.content-inner form .form-inputs .form-line.input-text input {
+.content-inner form .form-inputs .form-line.input-check {}
+.content-inner form .form-inputs .form-line.input-check label {}
+.content-inner form .form-inputs .form-line.input-check.right-message {}
+.content-inner form .form-inputs .form-line.input-check.right-message label {
+	font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 40px;
+    text-align: right;
+}
+.content-inner form .form-inputs .form-line.input-check.right-message label a {
+	color: #9c3;
+}
+.content-inner form .form-inputs .form-line.input-check.right-message label::before {
+	top: 15px;
+}
+.content-inner form .form-inputs .form-line.input-text input,
+.content-inner form .form-inputs .form-line.input-text select {
 	float: left;
 	font-size: 18px;
 	height: 40px;
@@ -598,15 +759,26 @@ header.compressed .navegacion a.fa {
 	background: #ddd;
 	box-sizing: border-box;
 }
+.content-inner form .form-inputs .form-line.input-text select option {
+	display: block;
+	font-size: 18px;
+	padding: 10px;
+}
 .content-inner form .form-inputs .form-line.input-text.input-short label {}
 .content-inner form .form-inputs .form-line.input-text.input-short input {}
-.content-inner form .form-inputs .form-line.input-text.input-medium label {}
-.content-inner form .form-inputs .form-line.input-text.input-medium input {}
-.content-inner form .form-inputs .form-line.input-text.input-large label {
-	width: 200px;
+.content-inner form .form-inputs .form-line.input-text.input-medium label {
+	width: 50%;
 }
-.content-inner form .form-inputs .form-line.input-text.input-large input {
-	width: 550px;
+.content-inner form .form-inputs .form-line.input-text.input-medium input,
+.content-inner form .form-inputs .form-line.input-text.input-medium select {
+	width: 50%;
+}
+.content-inner form .form-inputs .form-line.input-text.input-large label {
+	width: 25%;
+}
+.content-inner form .form-inputs .form-line.input-text.input-large input,
+.content-inner form .form-inputs .form-line.input-text.input-large select {
+	width: 75%;
 }
 .content-inner form .form-inputs .form-line.input-textarea {
 	border: none;
@@ -636,6 +808,52 @@ header.compressed .navegacion a.fa {
 }
 
 /* PRIMER PASO */
+.contratar .content-inner form .right-side-inputs {}
+.contratar .content-inner form .right-side-inputs h2,
+.asegurar .content-inner form .right-side-inputs h2,
+.finalizar .content-inner form .right-side-inputs h2 {
+	color: #999;
+}
+.contratar .content-inner form .right-side-inputs h2 strong,
+.asegurar .content-inner form .right-side-inputs h2 strong,
+.finalizar .content-inner form .right-side-inputs h2 strong {
+	color: #9c3;
+}
+.contratar .content-inner form .right-side-inputs h2 span.number-globe,
+.asegurar .content-inner form .right-side-inputs h2 span.number-globe,
+.finalizar .content-inner form .right-side-inputs h2 span.number-globe {
+	background: #9c3 none repeat scroll 0 0;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 37px;
+    margin-right: 15px;
+    text-align: center;
+    width: 40px;
+}
+.finalizar .content-inner form .right-side-inputs h2 span.number-globe {
+	line-height: 35px;
+	position: relative;
+    top: -2px;
+}
+.contratar .content-inner form .form-inputs {}
+.contratar .content-inner form .form-inputs .form-line,
+.asegurar .content-inner form .form-inputs .form-line,
+.finalizar .content-inner form .form-inputs .form-line {
+	margin-left: 62px;
+}
+.contratar .content-inner form .form-inputs .btn,
+.asegurar .content-inner form .form-inputs .btn,
+.finalizar .content-inner form .form-inputs .btn {
+	padding: 8px 18px;
+}
+.contratar .content-inner form .form-inputs .btn .fa,
+.asegurar .content-inner form .form-inputs .btn .fa,
+.finalizar .content-inner form .form-inputs .btn .fa {
+	margin: 0;
+	font-size: 26px;
+}
 
 .pasos {
 	height: 530px;
