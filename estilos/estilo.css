@@ -256,7 +256,7 @@ header .logo_contenedor {
 	transform: all .3s ease;
 }
 header .logo_contenedor img.logo {
-	margin-top: 3px;
+	margin-top: 1px;
 }
 header .logo_contenedor img.logo_solo {
 	display: none;
