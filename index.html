@@ -17,9 +17,10 @@
 			</div>
 			<div class="navegacion_contenedor">
 				<nav class="navegacion">
+					<a class="hover_verde" href="#seguros">Seguros</a>
 					<a class="hover_verde" href="#nosotros">Quiénes somos</a>
 					<a class="hover_verde" href="#razones">Por qué elegirnos</a>
-					<a class="hover_verde" href="/">Contacto</a>
+					<a class="fa fa-envelope hover_verde" href="#contacto"></a>
 				</nav>
 			</div>
 		</div>	
@@ -44,7 +45,7 @@
 		</div>
 
 		<div class="seguros_contenedor">
-			<div class="center seguros">
+			<div class="center seguros" id="_seguros">
 				<div class="sombra"></div>
 				<div class="seguros_inner">
 					<div class="clear">
@@ -153,6 +154,36 @@
 				<p>Esperamos que estas reflexiones te animen a dar el click y contratar a través de SegurosOnline el mejor seguro que se adapte a tus necesidades. Y si aún no te animas a contratar con nosotros te agradecemos el tiempo que le has dedicado a conocer nuestra Web.</p>
 			</div>
 		</div>
+
+		<div class="center contacto" id="_contacto">
+			<!-- <div class="sombra"></div> -->
+			<div class="content-inner">
+				<form action="/send-email.php">
+					<span class="fa fa-envelope left-side-icon"></span>
+					<div class="form-inputs right-side-inputs">
+						<h2>Envianos tu consulta o comentario</h2>
+						<div class="form-line input-text input-large">
+							<label for="nombre">Nombre:</label>
+							<input type="text" id="nombre">
+						</div>
+						<div class="form-line input-text input-large">
+							<label for="apellido">Apellido:</label>
+							<input type="text" id="apellido">
+						</div>
+						<div class="form-line input-text input-large">
+							<label for="email">e-Mail:</label>
+							<input type="text" id="email">
+						</div>
+						<div class="form-line input-textarea">
+							<label for="message">Consulta o Comentario:</label>
+							<textarea id="message"></textarea>
+						</div>
+						<a href="/" class="btn">Enviar <span class="fa fa-angle-right"></span></a>
+					</div>
+					<div class="clear"></div>
+				</form>
+			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -162,7 +193,7 @@
 				<span class="separador">|</span>
 				<a class="hover_verde" href="#razones">Por qué elegirnos</a>
 				<span class="separador">|</span>
-				<a class="hover_verde" href="/">Contacto</a>
+				<a class="hover_verde" href="#contacto">Contacto</a>
 			</div>
 			<div class="logo_footer">
 				<a href="/"><img src="imagenes/logos/logo-footer.png"></a>

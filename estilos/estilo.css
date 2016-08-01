@@ -155,6 +155,9 @@ header .logo_contenedor {
 	float: left;
 	transform: all .3s ease;
 }
+header .logo_contenedor img.logo {
+	margin-top: 3px;
+}
 header .logo_contenedor img.logo_solo {
 	display: none;
 }
@@ -167,7 +170,7 @@ header .navegacion a {
     font-size: 18px;
     height: 85px;
     line-height: 85px;
-    padding: 0 25px;
+    padding: 0 15px;
     text-decoration: none;
     text-transform: uppercase;
     transition: all .2s ease;
@@ -178,6 +181,10 @@ header .navegacion a.activo {
 }
 header .navegacion a.activo:hover {
 	color: #666;
+}
+header .navegacion a.fa {
+	line-height: 86px;
+	margin: 0;
 }
 
 /* ENCABEZADO FIJO */
@@ -201,6 +208,10 @@ header.compressed .navegacion a {
     line-height: 60px;
     font-size: 16px;
     transition: all .2s ease;
+}
+header.compressed .navegacion a.fa {
+	line-height: 61px;
+	margin: 0;
 }
 
 /* BODY */
@@ -495,7 +506,7 @@ header.compressed .navegacion a {
 .razones .sombra {
 	background: #fff none repeat scroll 0 0;
     border-radius: 50%;
-    bottom: 5%;
+    bottom: 6%;
     -webkit-box-shadow: 0 0 70px 30px;
     left: 10%;
     position: absolute;
@@ -511,6 +522,116 @@ header.compressed .navegacion a {
 .razones .content-inner {
 	position: relative;
 	background: #fff;
+}
+
+/* CONTACTO */
+.contacto {
+	position: relative;
+	margin-bottom: 30px;
+}
+/*.contacto .sombra {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 12%;
+    -webkit-box-shadow: 0 0 70px 30px;
+    left: 10%;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+}
+@-moz-document url-prefix() {
+    .contacto .sombra {
+        box-shadow: 0 0 70px 25px;
+    }
+}*/
+.contacto .content-inner {
+	position: relative;
+	background: #fff;
+}
+
+/* FORMULARIOS */
+.content-inner form {}
+.content-inner form h2 {
+	border: none;
+    padding: 0;
+}
+.content-inner form .left-side-icon {
+	background: #9c3;
+    border-radius: 100px;
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 90px;
+    height: 200px;
+    line-height: 200px;
+    margin: 0 50px;
+    text-align: center;
+    width: 200px;
+}
+.content-inner form .right-side-inputs {
+	width: 750px;
+	float: left;
+	border: none;
+    padding: 0;
+}
+.content-inner form .form-inputs {}
+.content-inner form .form-inputs .form-line {
+	border-bottom: 2px solid #999;
+	overflow: hidden;
+}
+.content-inner form .form-inputs .form-line.input-text {}
+.content-inner form .form-inputs .form-line label {
+	float: left;
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+}
+.content-inner form .form-inputs .form-line.input-text input {
+	float: left;
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	margin: 3px 0;
+	border: 0;
+	padding: 0 15px;
+	background: #ddd;
+	box-sizing: border-box;
+}
+.content-inner form .form-inputs .form-line.input-text.input-short label {}
+.content-inner form .form-inputs .form-line.input-text.input-short input {}
+.content-inner form .form-inputs .form-line.input-text.input-medium label {}
+.content-inner form .form-inputs .form-line.input-text.input-medium input {}
+.content-inner form .form-inputs .form-line.input-text.input-large label {
+	width: 200px;
+}
+.content-inner form .form-inputs .form-line.input-text.input-large input {
+	width: 550px;
+}
+.content-inner form .form-inputs .form-line.input-textarea {
+	border: none;
+}
+.content-inner form .form-inputs .form-line.input-textarea label {
+	float: none;
+	width: 100%;
+}
+.content-inner form .form-inputs .form-line.input-textarea textarea {
+	background: #ddd;
+    border: none;
+    box-sizing: border-box;
+    height: 150px;
+    margin: 3px 0;
+    width: 100%;
+    padding: 15px;
+}
+.content-inner form .form-inputs .btn {
+	float: right;
+	margin-top: 10px;
+	background: #9c3;
+	color: #fff;
+	padding: 10px 20px;
+}
+.content-inner form .form-inputs .btn .fa {
+	color: #fff;
 }
 
 /* PRIMER PASO */
