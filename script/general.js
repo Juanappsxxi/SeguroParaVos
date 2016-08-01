@@ -26,12 +26,12 @@ $(document).on('ready', function() {
 			if(carouselIndex < $carouselVisible.parent().find('> li').length -1) {
 				$('#slider-banner').jcarousel('scroll', carouselIndex +1, true, function() {
 					jcarouselAutostart();
-					updatePagination();
+					// updatePagination();
 				});
 			} else {
 				$('#slider-banner').jcarousel('scroll', 0, true, function() {
 					jcarouselAutostart();
-					updatePagination();
+					// updatePagination();
 				});
 			}
 		}, 3000);
