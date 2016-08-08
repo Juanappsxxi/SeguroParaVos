@@ -705,8 +705,10 @@ header.compressed .navegacion a.fa {
 	width: 800px;
 }
 .content-inner form .form-inputs .form-line {
-	border-bottom: 2px solid #999;
 	overflow: hidden;
+}
+.content-inner form .form-inputs .border-bottom {
+	border-bottom: 2px solid #999;
 }
 .content-inner form .form-inputs .form-line h3 {
 	color: #9c3;
@@ -802,6 +804,9 @@ header.compressed .navegacion a.fa {
 	background: #9c3;
 	color: #fff;
 	padding: 10px 20px;
+}
+.content-inner form .form-inputs .btn.left {
+	float: left;
 }
 .content-inner form .form-inputs .btn .fa {
 	color: #fff;
