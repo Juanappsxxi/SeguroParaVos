@@ -71,6 +71,7 @@ $(document).on('ready', function() {
 			} else {
 				// Check for ajax type hash
 				if($this.attr('href').indexOf('#/') != -1) {
+					console.log($('#' + $this.data('objetformid')));
 					processActionHash($this.attr('href'));
 				} else {
 					document.location.href = $this.attr('href');
@@ -178,6 +179,7 @@ function processActionHash(hash, data) {
 		case 'finalizar':
 			// Set loading
 			$('#_' + modelo).append('<div class="loading"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i><br><span>Cargando <h3 class="titulo-seguro"><span>' + modelo + '</span><strong>' + categoria.replace('seguro', '') + '</strong></h3></span><br><span><a href="#/' + modelo + '/' + categoria + '/cancelar">Cancelar</a></span></div>');
+			$('#_' + modelo).find('.loading').fadeIn();
 
 			// Scroll to model box
 			$('html, body').animate({
@@ -191,7 +193,9 @@ function processActionHash(hash, data) {
 					// On form request success
 					if(status == 'success') {
 						// Remove loading
-						$('#_' + modelo).find('.loading').remove();
+						$('#_' + modelo).find('.loading').fadeOut(function() {
+							$(this).remove();
+						});
 						// Hide categories
 						$('#_' + modelo).find('.categorias').slideUp();
 						// Show response form
