@@ -36,6 +36,7 @@ strong {
 a {
 	text-decoration: none;
 	font-family: "Raleway-Medium";
+	outline: none;
 }
 h2 {
 	display: inline-block;
@@ -153,8 +154,32 @@ body {
 	font-family: 'Raleway-Bold';
 	color: #9c3;
 }
-
-
+.loading {
+	background: rgba(255,255,255,.8);
+    bottom: 0;
+    left: 0;
+    padding: 250px 0 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+.loading h3.titulo-seguro {
+	display: inline-block;
+	margin: 0;
+}
+.loading span,
+.loading strong {
+    font-size: 22px;
+}
+.loading span a {
+	font-size: 18px;
+	color: #9c3;
+}
+.loading .fa {
+	margin: 10px 0;
+	animation: 1s linear 0s normal none infinite running fa-spin;
+}
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
@@ -218,6 +243,11 @@ body {
   box-shadow: none;
   border-color: #999;
   background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:before {
+	background: #9c3;
+    border-color: #ad4;
+    opacity: .5;
 }
 [type="checkbox"]:disabled:checked + label:after {
   color: #999;
@@ -379,6 +409,9 @@ header.compressed .navegacion a.fa {
     right: 15%;
     top: 25%;
 }
+.formularios-seguros {
+	display: none;
+}
 /* Hiperfix for darknes shadow in firefox */
 @-moz-document url-prefix() { 
     .seguros .sombra {
@@ -392,15 +425,16 @@ header.compressed .navegacion a.fa {
     width: 33.334%;
     height: 440px;
     box-sizing: border-box;
-    border-left: solid 1px #666;
-    border-right: solid 1px #666;
+    /*border-left: solid 1px #999;
+    border-right: solid 1px #999;*/
     text-align: center;
 }
-.seguros .seguro:first-child {
-	border-right: none;
+.seguros .seguro:first-child,
+.seguros .seguro:not(first-child) {
+	border-left: solid 1px #999;
 }
 .seguros .seguro:last-child {
-	border-left: none;
+	border-right: solid 1px #999;
 }
 .seguros .seguro span.fa.rounded,
 .pasos_seguro .paso span.fa.rounded {
@@ -413,7 +447,7 @@ header.compressed .navegacion a.fa {
 	margin: 0;
 	margin-bottom: 20px;
 }
-.seguros .seguro.seguro_mobile > span.fa {
+.seguros .seguro.seguro_movil > span.fa {
 	font-size: 110px;
 }
 .seguros .seguro.seguro_hogar > span.fa {
@@ -423,15 +457,18 @@ header.compressed .navegacion a.fa {
 .seguros .seguro h3 {
 	margin: 0;
 }
+h3.titulo-seguro,
 .seguros .seguro h3.titulo-seguro,
 .pasos_seguro .paso h3.titulo-seguro {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
+h3.titulo-seguro span,
 .seguros .seguro h3.titulo-seguro span,
 .pasos_seguro .paso h3.titulo-seguro span {
 	font-family: "Raleway-Regular";
 }
+h3.titulo-seguro strong,
 .seguros .seguro h3.titulo-seguro strong,
 .pasos_seguro .paso h3.titulo-seguro strong {
 	color: #9c3;
@@ -474,7 +511,7 @@ header.compressed .navegacion a.fa {
 	font-size: 14px;
 	margin-left: 24px;
 }
-.seguro_mobile {
+.seguro_movil {
 	float: left;
 	width: 366px;
 	padding-left: 70px;
@@ -590,7 +627,7 @@ header.compressed .navegacion a.fa {
     border-radius: 50%;
     bottom: 25%;
     /*box-shadow: 0 0 180px 60px;*/
-    -webkit-box-shadow: 0 0 70px 50px;
+    -webkit-box-shadow: 0 0 130px 75px;
     left: 15%;
     position: absolute;
     right: 15%;
@@ -599,7 +636,7 @@ header.compressed .navegacion a.fa {
 /* Hiperfix for darknes shadow in firefox */
 @-moz-document url-prefix() { 
     .nosotros .sombra {
-        box-shadow: 0 0 70px 25px;
+        box-shadow: 0 0 130px 45px;
     }
 }
 .nosotros .content-inner {
@@ -810,6 +847,18 @@ header.compressed .navegacion a.fa {
 }
 .content-inner form .form-inputs .btn .fa {
 	color: #fff;
+}
+.content-inner form .form-inputs .btn span:not(.fa) {
+	color: #fff;
+    display: inline-block;
+    line-height: 10px;
+    margin-right: 14px;
+    position: relative;
+    top: -3px;
+}
+.content-inner form .form-inputs .btn.left span:not(.fa) {
+	margin-right: 0;
+	margin-left: 14px;
 }
 
 /* PRIMER PASO */

@@ -17,7 +17,7 @@
 			</div>
 			<div class="navegacion_contenedor">
 				<nav class="navegacion">
-					<a class="hover_verde" href="#seguros">Seguros</a>
+					<a class="hover_verde" href="#seguro">Seguros</a>
 					<a class="hover_verde" href="#nosotros">Quiénes somos</a>
 					<a class="hover_verde" href="#razones">Por qué elegirnos</a>
 					<a class="fa fa-envelope hover_verde" href="#contacto"></a>
@@ -41,52 +41,20 @@
 					</li>
 				</ul>
 			</div>
-			<p><a href="#home"><span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span>.com.uy</a> es una aplicación de (Larraura Seguros) con más de 15 años de experiencia en el mercado asegurador. En forma simple y rapida, <strong>www.segurosparavos.com</strong> fue creada para brindar soluciones innovadoras en la contratación de seguros para vos.</p>
+			<p><span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span> es una plataforma de Larraura Seguros, quien con más de 15 años de experiencia en el mercado asegurador crea <span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span> para brindar soluciones innovadoras en la contratación de seguros.</p>
 		</div>
 
 		<div class="seguros_contenedor">
-			<div class="center seguros" id="_seguros">
+			<div class="center seguros" id="_seguro">
 				<div class="sombra"></div>
 				<div class="seguros_inner">
-					<div class="clear">
-						<div class="seguro seguro_mobile">
-							<span class="fa fa-5x fa-mobile rounded"></span>
-							<h3 class="titulo-seguro">
-								<span>Seguro</span><strong>Móvil</strong>
-							</h3>
-							<ul>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura de Pantalla</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Cobertura por robo</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Todo riesgo</span></li>
-							</ul>
-							<a href="/demos/seguro-movil/#contratar" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
-						</div>
-						<div class="seguro seguro_emergencia">
-							<span class="fa fa-5x fa-bullhorn rounded"></span>
-							<h3 class="titulo-seguro">
-								<span>Seguro</span><strong>Emergencia</strong>
-							</h3>
-							<ul>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Planes Robo Bolso/Cartera</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Tranquilidad</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Home Warranty</span></li>
-							</ul>
-							<a href="/demos/seguro-emergencia/#contratar" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
-						</div>
-						<div class="seguro seguro_hogar">
-							<span class="fa fa-5x fa-home rounded"></span>
-							<h3 class="titulo-seguro">
-								<span>Seguro</span><strong>Hogar</strong>
-							</h3>
-							<ul>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio*</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Incendio Edificio y Contenido*</span></li>
-								<li><i class="fa fa-check-circle"></i><span class="seguro_span">Hogar Seguro*</span><br><span class="comentario">(incluye robo y daño eléctrico)</span></li>
-							</ul>
-							<a href="/demos/seguro-hogar/#contratar" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
-						</div>
+					<div class="categorias">
+						<?php
+						// Cargar categorías de seguros desde la base de datos en el siguiente template
+						include 'seguros.php';
+						?>
 					</div>
-					<p class="comentario_seguros">(*) Todos los seguros incluyen emergencias domiciliarias (cerrajeria, vidriería, electricidad, sanitaria)</p>
+					<div class="formularios">Algo por aquí?</div>
 				</div>
 			</div>
 		</div>
@@ -121,10 +89,15 @@
 		<div class="center nosotros" id="_nosotros">
 			<div class="sombra"></div>
 			<div class="content-inner">
+				<h2>Qué hacemos</h2>	
+				<p>Apuntamos a ofrecer una nueva experiencia en la contratación de seguros, sin trámites, en 3 rápidos  pasos y desde la comodidad de tu dispositivo electrónico.</p>
+				<p><span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span> brinda una solución integral, para contratar tu seguro de una forma sencilla y ágil, respaldando a sus clientes desde la asesoría para la contratación hasta la gestión de un siniestro. Para esto, contamos con un equipo, listo para ayudarte.</p>
 				<h2>Misión</h2>	
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi debitis suscipit, beatae dolore perferendis architecto cumque cum molestias asperiores maiores temporibus eos, est explicabo perspiciatis officia natus laboriosam obcaecati soluta.</p>
+				<p>Somos líderes en innovación en la industria de seguros, nuestra tecnología nos permite procesos más veloces y eficaces mejorando el servicio brindado al cliente.</p>
+				<p>Todos nuestros esfuerzos se centran en seguir mejorando la interacción con el cliente y aumentar la gama de servicios disponibles bajo este nuevo formato de comercialización de seguros.</p>
 				<h2>Visión</h2>	
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi debitis suscipit, beatae dolore perferendis architecto cumque cum molestias asperiores maiores temporibus eos, est explicabo perspiciatis officia natus laboriosam obcaecati soluta.</p>
+				<p>Queremos ser reconocidos como un equipo de trabajo profesional, enfocados en la mejora continua, con tecnología de punta y satisfaciendo las expectativas de nuestros clientes, por medio de una atención personalizada.</p>
+				<p>Reflejando así las bases de una empresa en continuo desarrollo, para alcanzar los más altos estándares de sinergia con las compañías aseguradoras y  satisfacción con el cliente.</p>
 			</div>
 		</div>
 
