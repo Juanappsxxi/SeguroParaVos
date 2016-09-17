@@ -17,7 +17,6 @@ $categorias = $db->get('categoria');
 <div class="clear">
 <?php
 foreach ($categorias as $categoria) {
-	// var_dump($categoria);
 	?>
 	<div class="seguro <?php echo sanear_string(strtolower (str_replace (' ', '_', $categoria['nombre']))) ?>">
 		<span class="fa fa-5x fa-<?php echo $categoria['icono'] ?> rounded"></span>

@@ -24,7 +24,7 @@ if (!empty ($accion)) {
 			$seguros   = getProductsByCategory($categoria['id']);
 			?>
 
-<div class="center contratar" id="_contratar">
+<div class="center contratar">
 	<div class="content-inner">
 		<form id="cotizar">
 			<div class="left-side-title">
@@ -35,11 +35,6 @@ if (!empty ($accion)) {
 			</div>
 			<div class="form-inputs right-side-inputs">
 				<h2><span class="number-globe">1</span> Elegí tu seguro y cotizalo</h2>
-
-				<pre>
-				<?php // var_dump($seguros); ?>
-				</pre>
-				
 				<?php foreach ($seguros as $seguro) { ?>
 					<?php $seguro_sano = strtolower (sanear_string(str_replace (' ', '_', $seguro['nombre']))) ?>
 					<div class="form-line border-bottom input-check">
@@ -78,6 +73,7 @@ if (!empty ($accion)) {
 			</div>
 			<div class="form-inputs right-side-inputs">
 				<h2><span class="number-globe">2</span> Ingresá tus datos y contratalo</h2>
+				<h3>Ingresa tus datos personales</h3>
 				<div class="form-line border-bottom input-text input-large">
 					<label for="nombre">Nombre:</label>
 					<input type="text" id="nombre" name="nombre">
@@ -160,6 +156,7 @@ function getCategoryByNameslug($nameslug) {
 	global $db;
 	// Traer la categoría según el nombre del registro
 	$db->where('nombre_sano', $nameslug);
+	$db->where('estado', 1);
 	$categoria = $db->getOne('categoria');
 	return $categoria;
 }
@@ -168,6 +165,7 @@ function getProductsByCategory($catid) {
 	global $db;
 	// Traer los seruguros según la categoría
 	$db->where('categoria', $catid);
+	$db->where('estado', 1);
 	$seguros = $db->get('seguro');
 	return $seguros;
 }

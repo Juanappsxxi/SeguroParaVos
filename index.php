@@ -19,7 +19,8 @@
 				<nav class="navegacion">
 					<a class="hover_verde" href="#seguro">Seguros</a>
 					<a class="hover_verde" href="#nosotros">Quiénes somos</a>
-					<a class="hover_verde" href="#razones">Por qué elegirnos</a>
+					<a class="hover_verde" href="#aseguradoras">Aseguradoras</a>
+					<a class="hover_verde" href="#comopagar">Como Pagar</a>
 					<a class="fa fa-envelope hover_verde" href="#contacto"></a>
 				</nav>
 			</div>
@@ -101,7 +102,23 @@
 			</div>
 		</div>
 
-		<div class="center razones" id="_razones">
+		<div class="center aseguradoras" id="_aseguradoras">
+			<div class="content-inner">
+				<h2>Compañías que confían en nosotros</h2>
+				<p>En <span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span> te ofrecemos el abanico más amplio de compañías aseguradoras para que puedas elegir y comparar con nuestro multicotizador online la que más se adapte a tus necesidades.</p>
+				<p>Contamos con el mayor respaldo financiero de todas las compañias aseguradoras que solo te puede brindar el broker online lider del país.</p>
+			</div>
+		</div>
+
+		<div class="center comopagar" id="comopagar">
+			<div class="sombra"></div>
+			<div class="content-inner">
+				<h2>Formas de pago de acuerdo al producto</h2>
+				<p></p>
+			</div>
+		</div>
+
+		<!-- <div class="center razones" id="_razones">
 			<div class="sombra"></div>
 			<div class="content-inner">
 				<h2>10 Razones para contratar <span class="site-title"><span class="seguro">Seguro</span><span class="para">Para</span><span class="vos">Vos</span></span></h2>	
@@ -126,7 +143,7 @@
 				<h4>#10 / LA ÚLTIMA RAZÓN LA TIENES TÚ</h4>
 				<p>Esperamos que estas reflexiones te animen a dar el click y contratar a través de SegurosOnline el mejor seguro que se adapte a tus necesidades. Y si aún no te animas a contratar con nosotros te agradecemos el tiempo que le has dedicado a conocer nuestra Web.</p>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="center contacto" id="_contacto">
 			<!-- <div class="sombra"></div> -->

@@ -284,10 +284,12 @@ header {
 }
 header .logo_contenedor {
 	float: left;
+	width: 370px;
 	transform: all .3s ease;
 }
 header .logo_contenedor img.logo {
-	margin-top: 1px;
+	margin-top: 12px;
+	width: 100%;
 }
 header .logo_contenedor img.logo_solo {
 	display: none;
@@ -670,6 +672,31 @@ h3.titulo-seguro strong,
 	background: #fff;
 }
 
+.aseguradoras {
+	position: relative;
+	margin-bottom: 30px;
+}
+.aseguradoras .sombra {
+	background: #fff none repeat scroll 0 0;
+    border-radius: 50%;
+    bottom: 6%;
+    -webkit-box-shadow: 0 0 70px 30px;
+    left: 10%;
+    position: absolute;
+    right: 10%;
+    top: 80%;
+}
+/* Hiperfix for darknes shadow in firefox */
+@-moz-document url-prefix() { 
+    .aseguradoras .sombra {
+        box-shadow: 0 0 70px 20px;
+    }
+}
+.aseguradoras .content-inner {
+	position: relative;
+	background: #fff;
+}
+
 /* CONTACTO */
 .contacto {
 	position: relative;
@@ -701,6 +728,7 @@ h3.titulo-seguro strong,
 	border: none;
     padding: 0;
 }
+.content-inner form h3 {}
 .content-inner form .left-side-title {
     border-right: 1px solid #ccc;
     box-sizing: border-box;
