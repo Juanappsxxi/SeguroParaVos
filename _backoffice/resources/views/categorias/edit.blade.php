@@ -2,50 +2,65 @@
 
 @section('content')
 
-<h1>Edita categoría: "{{ $categoria->nombre }}"</h1>
-<p>Edita esta categoría o vuelve a la lista. <a href="{{ route('categorias.index') }}">Volver a Categorías</a></p>
-<hr>
-
-<a href="{{ route('categorias.index') }}" class="btn btn-info">Back to all Categorías</a>
-
-<div class="pull-right">
-    <a href="{{ route('categorias.delete', $categoria->id) }}" class="btn btn-danger">Delete Categoría</a>
-</div>
+<h1><span class="glyphicon glyphicon-pencil"></span> Editando categoría "{{ $categoria->nombre }}"</h1>
+<p class="lead">Edita esta categoría o vuelve a la lista. <a href="{{ route('categorias.index') }}">Volver a la lista.</a></p>
 
 <hr>
 
 @include('partials.alerts.errors')
-
-@if(Session::has('flash_message'))
-    <div class="alert alert-success">
-        {{ Session::get('flash_message') }}
-    </div>
-@endif
+@include('partials.alerts.success-message')
 
 {!! Form::model($categoria, [
     'method' => 'PATCH',
     'route' => ['categorias.update', $categoria->id]
 ]) !!}
 
-<div class="form-group">
-    {!! Form::label('nombre', 'Nombre:', ['class' => 'control-label']) !!}
-    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
-</div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <a href="{{ route('categorias.index') }}" class="btn btn-info">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                Atrás
+            </a>
 
-<div class="form-group">
-    {!! Form::label('caracteristicas', 'Características:', ['class' => 'control-label']) !!}
-    {!! Form::textarea('caracteristicas', null, ['class' => 'form-control']) !!}
-</div>
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-floppy-disk"></span>
+                Guardar cambios
+            </button>
+            
+            <div class="pull-right">
+                <a href="{{ route('categorias.delete', $categoria->id) }}" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    Delete Categoría
+                </a>
+            </div>
+        </div>
 
-<div class="form-group">
-    {!! Form::label('icono', 'Ícono:', ['class' => 'control-label']) !!}
-    {!! Form::text('icono', null, ['class' => 'form-control']) !!}
-</div>
+        <div class="panel-body">
+            <div class="form-group">
+                {!! Form::label('nombre', 'Nombre:', ['class' => 'control-label']) !!}
+                {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+            </div>
 
-{!! Form::submit('Guardar Categoría', ['class' => 'btn btn-primary']) !!}
+            <div class="form-group">
+                {!! Form::label('caracteristicas', 'Características:', ['class' => 'control-label']) !!}
+                {!! Form::textarea('caracteristicas', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('icono', 'Ícono:', ['class' => 'control-label']) !!}
+                {!! Form::text('icono', null, ['class' => 'form-control']) !!}
+            </div>
+        </div>
+
+        <div class="panel-footer">
+            <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-floppy-disk"></span>
+                Guardar cambios
+            </button>
+            <!-- {!! Form::submit('Guardar Categoría', ['class' => 'btn btn-primary']) !!} -->
+        </div>
+    </div>
 
 {!! Form::close() !!}
-
-<hr>
 
 @stop

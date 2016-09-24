@@ -2,8 +2,9 @@
 
 @section('content')
 
-<h1>Categorías guardadas</h1>
-<p class="lead">Aquí están todas las categorías guardadas. <a href="{{ route('categorias.create') }}">Agregar una?</a></p>
+<h1><h1><span class="glyphicon glyphicon-list-alt"></span> Categorías guardadas</h1>
+<p class="lead">Aquí están todas las categorías guardadas. <a href="{{ route('categorias.create') }}">Agregar una nueva</a></p>
+
 <hr>
 
 <div class="list-group">
@@ -23,9 +24,11 @@
 				<span class="glyphicon {{ $categoria->estado == 0 ? 'glyphicon-eye-open' : 'glyphicon-eye-close' }}"></span>
 			</a>
 		</div>
+
 	    <h4 class="list-group-item-heading">
 	    	<a href="{{ route('categorias.show', $categoria->id) }}">{{ $categoria->nombre }}</a>
 	    </h4>
+	    
 	    <p class="list-group-item-text">{{ $categoria->caracteristicas }}</p>
 	</div>
 @endforeach
