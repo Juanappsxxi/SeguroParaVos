@@ -18,6 +18,7 @@ class CategoriaController extends Controller
 	public function index()
 	{
 		$categorias = Categoria::all();
+		// var_dump($categorias);
 		return view('categorias.index', ['categorias' => $categorias, 'classes_categorias' => 'active']);
 	}
 

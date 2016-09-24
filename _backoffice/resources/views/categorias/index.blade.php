@@ -6,15 +6,29 @@
 <p class="lead">Aquí están todas las categorías guardadas. <a href="{{ route('categorias.create') }}">Agregar una?</a></p>
 <hr>
 
+<div class="list-group">
 @foreach($categorias as $categoria)
-    <h3>{{ $categoria->nombre }}</h3>
-    <p>{{ $categoria->caracteristicas}}</p>
-    <p>
-        <a href="{{ route('categorias.show', $categoria->id) }}" class="btn btn-info">View Categoría</a>
-        <a href="{{ route('categorias.edit', $categoria->id) }}" class="btn btn-primary">Edit Categoría</a>
-        <a href="{{ route('categorias.delete', $categoria->id) }}" class="btn btn-danger">Delete Categoría</a>
-    </p>
-    <hr>
+	<div class="list-group-item">
+		<div class="btn-group pull-right" role="group" aria-label="...">
+			<a class="btn btn-default" href="{{ route('categorias.show', $categoria->id) }}">
+				<span>Ver +</span>
+			</a>
+			<a class="btn btn-default" href="{{ route('categorias.edit', $categoria->id) }}">
+				<span class="glyphicon glyphicon-pencil"></span>
+			</a>
+			<a class="btn btn-default" href="{{ route('categorias.delete', $categoria->id) }}">
+				<span class="glyphicon glyphicon-remove"></span>
+			</a>
+			<a class="btn btn-default disabled" href="#" title="{{ $categoria->estado == 0 ? 'Mostrar al púbico' : 'Ocultar del público' }}">
+				<span class="glyphicon {{ $categoria->estado == 0 ? 'glyphicon-eye-open' : 'glyphicon-eye-close' }}"></span>
+			</a>
+		</div>
+	    <h4 class="list-group-item-heading">
+	    	<a href="{{ route('categorias.show', $categoria->id) }}">{{ $categoria->nombre }}</a>
+	    </h4>
+	    <p class="list-group-item-text">{{ $categoria->caracteristicas }}</p>
+	</div>
 @endforeach
+</div>
 
 @stop
