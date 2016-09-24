@@ -4,20 +4,25 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<title>v0.1 - Backoffice</title>
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<style>
+		body { padding-top: 70px; }
+	</style>
+
+	<title>v0.2 - Backoffice</title>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ route('home') }}">Backoffice</a>
+				<a class="navbar-brand" href="{{ route('home') }}"><strong>Back Office</strong> - SeguroParaVos.com.uy</a>
 			</div>
-			<div class="nav navbar-nav navbar-right">
-				<li><a href="{{ route('home') }}">Home</a></li>
-				<li><a href="{{ route('categorias.index') }}">Categorías</a></li>
-			</div>
+			@include('layouts.navigation')
 		</div>
 	</nav>
 
@@ -26,5 +31,15 @@
 			@yield('content')
 		</div>
 	</main>
+
+	<footer class="panel-footer">
+		<h6 class="text-center">Desarrollado por AppsXXI - Back Office vX.X - 2016 | Potenciado por PHP, MySQL, Laravel, cPanel, Bootstrap</h6>
+	</footer>
+
+	<!-- Latest compiled and minified jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
