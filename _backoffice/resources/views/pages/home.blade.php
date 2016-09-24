@@ -10,14 +10,14 @@
 <div class="list-group">
 	<div class="list-group-item">
 		<div class="btn-group pull-right" role="group" aria-label="...">
-			<a class="btn btn-default" href="#">
+			<a class="btn btn-default" href="{{ route('categorias.create') }}">
 				<span class="glyphicon glyphicon-plus"></span>
 			</a>
-			<a class="btn btn-default" href="#">
+			<a class="btn btn-default" href="{{ route('categorias.index') }}">
 				<span class="glyphicon glyphicon-th-list"></span>
 			</a>
 		</div>
-		<h4 class="list-group-item-heading"><a href="#">Categorías</a></h4>
+		<h4 class="list-group-item-heading"><a href="{{ route('categorias.index') }}">Categorías</a></h4>
 		<p class="list-group-item-text">Lista, agrega, edita o elimina categorías del sitio...</p>
 	</div>
 
