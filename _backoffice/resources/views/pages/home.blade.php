@@ -3,7 +3,7 @@
 @section('content')
 
 <h1><span class="glyphicon glyphicon-home"></span> Resumen Back Office</h1>
-<p class="lead">Administració de la base de datos</p>
+<p class="lead">Administración de la base de datos</p>
 
 <hr>
 
