@@ -22,4 +22,13 @@ Route::get('/categorias/{categorias}/delete', [
 ]);
 
 Route::resource('categorias', 'CategoriaController');
-Route::auth();
+
+Route::get('/register', 'Auth\AuthController@getRegister')->middleware('auth');
+Route::post('/register', 'Auth\AuthController@postRegister')->middleware('auth');
+Route::get('/login', 'Auth\AuthController@getLogin');
+Route::post('/login', 'Auth\AuthController@postLogin');
+Route::get('/logout', 'Auth\AuthController@getLogout');
+Route::get('/email', 'Auth\PasswordController@getEmail');
+Route::post('/email', 'Auth\PasswordController@postEmail');
+Route::get('/reset/{code}', 'Auth\PasswordController@getReset');
+Route::post('/reset', 'Auth\PasswordController@postReset');
