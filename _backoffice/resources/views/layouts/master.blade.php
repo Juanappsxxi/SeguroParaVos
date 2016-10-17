@@ -22,7 +22,9 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="{{ route('home') }}"><strong>Back Office</strong> - SeguroParaVos.com.uy</a>
 			</div>
+			@if (Auth::Check())
 			@include('layouts.navigation')
+			@endif
 		</div>
 	</nav>
 

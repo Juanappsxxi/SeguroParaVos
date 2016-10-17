@@ -22,3 +22,4 @@ Route::get('/categorias/{categorias}/delete', [
 ]);
 
 Route::resource('categorias', 'CategoriaController');
+Route::auth();
