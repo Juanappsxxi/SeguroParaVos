@@ -10,6 +10,11 @@ use App\Categoria;
 
 class CategoriaController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -18,7 +23,6 @@ class CategoriaController extends Controller
 	public function index()
 	{
 		$categorias = Categoria::all();
-		// var_dump($categorias);
 		return view('categorias.index', ['categorias' => $categorias, 'classes_categorias' => 'active']);
 	}
 

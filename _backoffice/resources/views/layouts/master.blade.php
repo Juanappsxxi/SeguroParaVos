@@ -18,12 +18,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="{{ route('home') }}"><strong>Back Office</strong> - SeguroParaVos.com.uy</a>
-			</div>
-			@include('layouts.navigation')
-		</div>
+		@include('layouts.header')
 	</nav>
 
 	<main>
@@ -32,10 +27,11 @@
 		</div>
 	</main>
 
+	@if (Auth::check())
 	<footer class="panel-footer">
 		<h6 class="text-center">Desarrollado por AppsXXI - Back Office vX.X - 2016 | Potenciado por PHP, MySQL, Laravel, cPanel, Bootstrap</h6>
 	</footer>
-
+	@endif
 	<!-- Latest compiled and minified jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 

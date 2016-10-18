@@ -8,9 +8,13 @@ use App\Http\Requests;
 
 class PagesController extends Controller
 {
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
+
     public function home()
     {
-        // return 'Welcome home!';
         return view('pages.home', ['classes_resumen' => 'active']);
     }
 }

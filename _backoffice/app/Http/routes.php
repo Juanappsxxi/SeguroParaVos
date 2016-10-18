@@ -22,3 +22,30 @@ Route::get('/categorias/{categorias}/delete', [
 ]);
 
 Route::resource('categorias', 'CategoriaController');
+
+// Route::auth();
+
+// Route::get('/home', 'HomeController@index');
+
+// Authentication Routes...
+Route::get('login', [
+	'as' => 'login',
+	'uses' => 'Auth\AuthController@showLoginForm'
+]);
+Route::post('login', [
+	'as' => 'post.login',
+	'uses' => 'Auth\AuthController@login'
+]);
+Route::get('logout', [
+	'as' => 'logout',
+	'uses' => 'Auth\AuthController@logout'
+]);
+
+// Registration Routes...
+// Route::get('register', 'Auth\AuthController@showRegistrationForm');
+// Route::post('register', 'Auth\AuthController@register');
+
+// Password Reset Routes...
+Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\PasswordController@reset');
