@@ -10,6 +10,11 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/estilo.css') }}">
+
+	@stack('styles')
+
 	<style>
 		body { padding-top: 70px; }
 	</style>
@@ -32,10 +37,13 @@
 		<h6 class="text-center">Desarrollado por AppsXXI - Back Office vX.X - 2016 | Potenciado por PHP, MySQL, Laravel, cPanel, Bootstrap</h6>
 	</footer>
 	@endif
+
 	<!-- Latest compiled and minified jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	@stack('scripts')
 </body>
 </html>
