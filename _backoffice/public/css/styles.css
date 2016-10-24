@@ -72,30 +72,6 @@
 	color: #398439;
 	content: 'Público';
 }
-/* checked mark aspect */
-/*[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
-  font-family: 'FontAwesome';
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  color: #ddd;
-  font-size: 32px;
-  line-height: 33px;
-  padding: 6px 12px;
-  text-decoration: none;
-  vertical-align: middle;
-}*/
-/* checked mark aspect changes */
-/*[type="checkbox"]:not(:checked) + label:after {
-  opacity: 0;
-  transform: scale(0);
-}
-[type="checkbox"]:checked + label:after {
-  opacity: 1;
-  transform: scale(1);
-}*/
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
@@ -103,9 +79,6 @@
   border-color: #bbb;
   background-color: #ddd;
 }
-/*[type="checkbox"]:disabled:checked + label:after {
-  color: #999;
-}*/
 [type="checkbox"]:disabled + label {
   color: #aaa;
 }

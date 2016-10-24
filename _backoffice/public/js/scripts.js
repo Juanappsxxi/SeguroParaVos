@@ -9,10 +9,4 @@ if ($('body').outerHeight() < $(window).outerHeight()) {
 	});
 }
 
-// $('body').on('click', '[role=boolean]', function(e) {
-// 	e.preventDefault();
-
-// 	console.log(this);
-// });
-
 });
