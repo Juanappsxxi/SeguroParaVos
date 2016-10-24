@@ -1,5 +1,14 @@
 @extends('layouts.master')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/bootstrap-iconpicker.min.css') }}">
+@endpush
+
+@push('scripts')
+<script src="{{ asset('js/iconset/iconset-fontawesome-4.3.0.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap-iconpicker.min.js') }}"></script>
+@endpush
+
 @section('content')
 
 <h1><span class="glyphicon glyphicon-pencil"></span> Editando categoría "{{ $categoria->nombre }}"</h1>
@@ -43,12 +52,33 @@
 
             <div class="form-group">
                 {!! Form::label('caracteristicas', 'Características:', ['class' => 'control-label']) !!}
+                <p><small>Escribe las características separadas por coma: <em><strong>Ejemplo 1, ejemplo 2</strong></em></small></p>
+                <p><small>Para agregar segunda línea a una característica, escribe entre paréntesis rectos: <em>Ejemplo 1 <strong>[Segunda línea]</strong>, Ejemplo 2</em></small></p>
                 {!! Form::textarea('caracteristicas', null, ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('icono', 'Ícono:', ['class' => 'control-label']) !!}
-                {!! Form::text('icono', null, ['class' => 'form-control']) !!}
+                &nbsp;
+                <button
+                 data-iconset="fontawesome"
+                 data-icon="{{ $categoria->icono }}"
+                 data-search-text="Buscar..."
+                 data-cols="6"
+                 data-placement="top"
+                 data-unselected-class="btn-info"
+                 class="btn btn-success btn-lg"
+                 id="icono"
+                 name="icono"
+                 class="form-control"
+                 type="text"
+                 role="iconpicker">
+                </button>
+
+                &nbsp;
+                <label>Estado: </label>
+                <input type="checkbox" id="estado" name="estado" {{ $categoria->estado ? 'checked=""' : '' }}>
+                <label for="estado">&nbsp;</label>
             </div>
         </div>
 
@@ -57,7 +87,6 @@
                 <span class="glyphicon glyphicon-floppy-disk"></span>
                 Guardar cambios
             </button>
-            <!-- {!! Form::submit('Guardar Categoría', ['class' => 'btn btn-primary']) !!} -->
         </div>
     </div>
 

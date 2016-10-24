@@ -51,6 +51,10 @@ class CategoriaController extends Controller
 		]);
 
 		$input = $request->all();
+		$input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
+
+		// var_dump($input);
+		// exit;
 
 		Categoria::create($input);
 
@@ -101,6 +105,9 @@ class CategoriaController extends Controller
 		]);
 
 		$input = $request->all();
+
+		$input = $request->all();
+		$input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
 
 		$categoria->fill($input)->save();
 

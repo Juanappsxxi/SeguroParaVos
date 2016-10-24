@@ -19,14 +19,13 @@ $categorias = $db->get('categoria');
 foreach ($categorias as $categoria) {
 	?>
 	<div class="seguro <?php echo sanear_string(strtolower (str_replace (' ', '_', $categoria['nombre']))) ?>">
-		<span class="fa fa-5x fa-<?php echo $categoria['icono'] ?> rounded"></span>
+		<span class="fa fa-5x <?php echo $categoria['icono'] ?> rounded"></span>
 		<h3 class="titulo-seguro">
 			<span><?php echo str_replace(' ', '</span><strong>', $categoria['nombre']) ?></strong>
 		</h3>
 		<ul>
 			<li>
-				<i class="fa fa-check-circle"></i>
-				<?php echo str_replace (array (', ', '[', ']'), array ('</li><li><i class="fa fa-check-circle"></i>', '<br><span class="comentario">', '</span>'), $categoria['caracteristicas']); ?>
+				<i class="fa fa-check-circle"></i><?php echo str_replace (array (', ', '[', ']'), array ('</li><li><i class="fa fa-check-circle"></i>', '<br><span class="comentario">', '</span>'), $categoria['caracteristicas']); ?>
 			</li>
 		</ul>
 		<a href="#/seguro/<?php echo strtolower (sanear_string($categoria['nombre'])) ?>/cotizar" class="btn">Contratar <span class="fa fa-angle-right"></span></a>
