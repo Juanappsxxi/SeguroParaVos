@@ -20,9 +20,6 @@
 			<a class="btn btn-default" href="{{ route('categorias.delete', $categoria->id) }}">
 				<span class="glyphicon glyphicon-remove"></span>
 			</a>
-			<a class="btn btn-default disabled" href="#" title="{{ $categoria->estado == 0 ? 'Mostrar al púbico' : 'Ocultar del público' }}">
-				<span class="glyphicon {{ $categoria->estado == 0 ? 'glyphicon-eye-open' : 'glyphicon-eye-close' }}"></span>
-			</a>
 		</div>
 
 	    <h4 class="list-group-item-heading">
