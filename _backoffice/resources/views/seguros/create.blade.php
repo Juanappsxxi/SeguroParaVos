@@ -87,6 +87,7 @@
 					<label>Valor en %: </label>
 	            	<input type="checkbox" class="bool" id="porcentaje" name="porcentaje">
 	                <label for="porcentaje">&nbsp;</label>
+	                <p>* Porcentaje del valor del producto asegurado</p>
 				</div>
 			</div>
 			<div class="row">
@@ -107,11 +108,11 @@
 						<div class="col-xs-6">
 							<input type="number" value="0" class="form-control" name="valor_cobertura" id="valor_cobertura">
 						</div>
-						<br><br>
 						<div class="col-xs-6">
 							<strong class="unidad-cobertura"></strong>
 						</div>
 					</div>
+					<br>
 					<div class="row">
 						<div class="col-xs-12">
 							<select name="unidad_cobertura"

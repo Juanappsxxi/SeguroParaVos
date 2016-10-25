@@ -23,6 +23,7 @@ class CategoriaController extends Controller
 	public function index()
 	{
 		$categorias = Categoria::all();
+		
 		return view('categorias.index', ['categorias' => $categorias, 'classes_categorias' => 'active']);
 	}
 
@@ -53,12 +54,9 @@ class CategoriaController extends Controller
 		$input = $request->all();
 		$input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
 
-		// var_dump($input);
-		// exit;
-
 		Categoria::create($input);
 
-		Session::flash('flash_message', 'Row successfully added!');
+		Session::flash('flash_message', 'La categoría se ha creado con éxito!');
 
 		return redirect()->back();
 	}

@@ -14,4 +14,9 @@ class Categoria extends Model
         'icono',
         'estado'
     ];
+
+    public function seguros()
+    {
+    	return $this->hasMany('App\Seguro', 'categoria');
+    }
 }

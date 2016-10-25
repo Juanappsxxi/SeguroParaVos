@@ -30,6 +30,7 @@
 	    </h4>
 	    
 	    <p class="list-group-item-text">{{ $categoria->caracteristicas }}</p>
+	    <p>Seguros asignados: <strong>{{ count($categoria->seguros) }}</strong></p>
 	</div>
 @endforeach
 </div>

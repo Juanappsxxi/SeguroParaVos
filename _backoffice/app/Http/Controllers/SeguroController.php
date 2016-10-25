@@ -53,7 +53,23 @@ class SeguroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nombre' => 'required',
+            'categoria' => 'required',
+            'pago' => 'required',
+            'valor_cobertura' => 'required',
+            'unidad_cobertura' => 'required',
+            'aseguradora' => 'required'
+        ]);
+
+        $input = $request->all();
+        $input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
+
+        Seguro::create($input);
+
+        Session::flash('flash_message', 'El seguro se ha creado con éxito!');
+
+        return redirect()->back();
     }
 
     /**
