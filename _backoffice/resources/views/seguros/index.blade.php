@@ -8,6 +8,9 @@
 <hr>
 
 <div class="list-group">
+@if(!count($seguros))
+	<h3>No se encontraron seguros</h3>
+@endif
 @foreach($seguros as $seguro)
 	<div class="list-group-item">
 		<div class="btn-group pull-right" role="group" aria-label="...">

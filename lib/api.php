@@ -30,7 +30,7 @@ if (!empty ($accion)) {
 			<div class="left-side-title">
 				<span class="fa fa-mobile left-side-icon"></span>
 				<h3>
-					<span><?php echo str_replace(' ', '</span><strong>', $categoria['nombre']) ?></strong>
+					<span><?php echo str_replace(' ', '</span><span>', $categoria['nombre']) ?></span>
 				</h3>
 			</div>
 			<div class="form-inputs right-side-inputs">

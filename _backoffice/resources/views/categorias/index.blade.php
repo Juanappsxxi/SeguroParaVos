@@ -8,6 +8,9 @@
 <hr>
 
 <div class="list-group">
+@if(!count($categorias))
+	<h3>No se encontraron categorías</h3>
+@endif
 @foreach($categorias as $categoria)
 	<div class="list-group-item">
 		<div class="btn-group pull-right" role="group" aria-label="...">

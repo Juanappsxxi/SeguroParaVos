@@ -462,27 +462,36 @@ header.compressed .navegacion a.fa {
 }
 h3.titulo-seguro,
 .seguros .seguro h3.titulo-seguro,
-.pasos_seguro .paso h3.titulo-seguro {
+.pasos_seguro .paso h3.titulo-seguro,
+.content-inner form .left-side-title h3 {
 	text-transform: uppercase;
 	margin-bottom: 20px;
 }
 h3.titulo-seguro span,
 .seguros .seguro h3.titulo-seguro span,
-.pasos_seguro .paso h3.titulo-seguro span {
-	font-family: "Raleway-Regular";
+.pasos_seguro .paso h3.titulo-seguro span,
+.content-inner form .left-side-title h3 span {
+	font-family: "Raleway-bold";
 }
-h3.titulo-seguro strong,
-.seguros .seguro h3.titulo-seguro strong,
-.pasos_seguro .paso h3.titulo-seguro strong {
+h3.titulo-seguro span + span,
+.seguros .seguro h3.titulo-seguro span + span,
+.pasos_seguro .paso h3.titulo-seguro span + span,
+.content-inner form .left-side-title h3 span + span {
+	font-family: "Raleway-Light";
+}
+h3.titulo-seguro span + span + span,
+.seguros .seguro h3.titulo-seguro span + span + span,
+.pasos_seguro .paso h3.titulo-seguro span + span + span,
+.content-inner form .left-side-title h3 span + span + span {
 	color: #9c3;
-	font-family: "Raleway-Bold";
+	font-family: "Raleway-Medium";
 }
 .seguros .seguro ul {
     margin: 0;
 	list-style: none;
-    padding: 0 30px 0 55px;
+    padding: 0 30px;
     text-align: left;
-    font-size: 18px;
+    font-size: 16px;
 }
 .seguros .seguro ul li {}
 .seguros .seguro ul li i {}
@@ -734,7 +743,6 @@ h3.titulo-seguro strong,
     box-sizing: border-box;
     display: block;
     float: left;
-    padding: 0 50px;
     text-align: center;
     width: 300px;
 }
@@ -755,10 +763,7 @@ h3.titulo-seguro strong,
 	font-family: "Raleway-Regular";
 	margin: 0;
     text-transform: uppercase;
-}
-.content-inner form .left-side-title h3 strong {
-	font-family: "Raleway-Bold";
-	color: #9c3;
+    font-size: 22px;
 }
 .content-inner form .right-side-inputs {
 	border: none;
