@@ -20,4 +20,9 @@ class Seguro extends Model
         'aseguradora',
         'estado'
     ];
+
+    public function categoria_padre()
+    {
+        return $this->belongsTo('App\Categoria', 'categoria');
+    }
 }

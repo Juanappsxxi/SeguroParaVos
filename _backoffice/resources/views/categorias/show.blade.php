@@ -24,7 +24,7 @@
 		<div class="pull-right">
             <a href="{{ route('categorias.delete', $categoria->id) }}" class="btn btn-danger">
                 <span class="glyphicon glyphicon-remove"></span>
-                Delete Categoría
+                Eliminar Categoría
             </a>
         </div>
 	</div>

@@ -80,7 +80,8 @@ class SeguroController extends Controller
      */
     public function show($id)
     {
-        //
+        $seguro = Seguro::findOrFail($id);
+        return view('seguros.show', ['seguro' => $seguro]);
     }
 
     /**
