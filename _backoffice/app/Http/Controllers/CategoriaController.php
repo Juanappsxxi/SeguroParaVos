@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Session;
 use App\Http\Requests;
 use App\Categoria;
+// use App\Seguro;
 
 class CategoriaController extends Controller
 {
