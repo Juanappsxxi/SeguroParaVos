@@ -59,7 +59,6 @@
 
             <div class="form-group">
                 {!! Form::label('icono', 'Ícono:', ['class' => 'control-label']) !!}
-                
                 &nbsp;
                 <button
                  data-iconset="fontawesome"

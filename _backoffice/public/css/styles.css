@@ -11,7 +11,7 @@
 }
 
 /* Forms */
-.form-group a#status {
+/*.form-group a#status {
     color: #ddd;
     font-size: 32px;
     line-height: 32px;
@@ -21,7 +21,7 @@
 }
 .form-group a#status:hover {}
 .form-group a#status.fa-toggle-on {}
-.form-group a#status.fa-toggle-off {}
+.form-group a#status.fa-toggle-off {}*/
 
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
@@ -35,10 +35,10 @@
   cursor: pointer;
 
   color: #ddd;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 36px;
   margin: 0;
-  padding: 6px 12px 6px 50px;
+  padding: 6px 12px 6px 40px;
   text-decoration: none;
   vertical-align: middle;
 }
@@ -65,13 +65,6 @@
 	color: #398439;
 	content: '';
 }
-[type="checkbox"]:not(:checked) + label:after {
-	content: 'Privado';
-}
-[type="checkbox"]:checked + label:after {
-	color: #398439;
-	content: 'Público';
-}
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
 [type="checkbox"]:disabled:checked + label:before {
@@ -88,3 +81,26 @@
 
 /* hover style just for information */
 label:hover:before {}
+
+/* Estado label */
+[type="checkbox"]:not(:checked) + label:after {
+  content: 'Privado';
+}
+[type="checkbox"]:checked + label:after {
+  color: #398439;
+  content: 'Público';
+}
+
+/* Booleano label*/
+.bool[type="checkbox"]:not(:checked) + label:after {
+  content: 'No';
+}
+.bool[type="checkbox"]:checked + label:after {
+  color: #398439;
+  content: 'Si';
+}
+
+.input-group .input-group-addon.currency,
+.input-group .input-group-addon.percent {
+  display: none;
+}

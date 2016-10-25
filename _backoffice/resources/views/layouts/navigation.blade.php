@@ -12,8 +12,8 @@
 				Categorías
 			</a>
 		</li>
-		<li role="presentation" class="disabled {{ isset($classes_seguros) ? $classes_seguros : '' }}">
-			<a href="#">
+		<li role="presentation" class="{{ isset($classes_seguros) ? $classes_seguros : '' }}">
+			<a href="{{ route('seguros.index') }}">
 				<span class="glyphicon glyphicon-lock"></span>
 				Seguros
 			</a>

@@ -16,16 +16,17 @@ Route::get('/', [
     'uses' => 'PagesController@home'
 ]);
 
+Route::resource('categorias', 'CategoriaController');
 Route::get('/categorias/{categorias}/delete', [
 	'as' => 'categorias.delete',
 	'uses' => 'CategoriaController@delete'
 ]);
 
-Route::resource('categorias', 'CategoriaController');
-
-// Route::auth();
-
-// Route::get('/home', 'HomeController@index');
+Route::resource('seguros', 'SeguroController');
+Route::get('/seguros/{seguros}/delete', [
+	'as' => 'seguros.delete',
+	'uses' => 'SeguroController@delete'
+]);
 
 // Authentication Routes...
 Route::get('login', [

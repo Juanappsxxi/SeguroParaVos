@@ -21,16 +21,16 @@
 		<p class="list-group-item-text">Lista, agrega, edita o elimina categorías del sitio...</p>
 	</div>
 
-	<div class="list-group-item disabled">
+	<div class="list-group-item">
 		<div class="btn-group pull-right" role="group" aria-label="...">
-			<a class="btn btn-default disabled" href="#">
+			<a class="btn btn-default" href="{{ route('seguros.create') }}">
 				<span class="glyphicon glyphicon-plus"></span>
 			</a>
-			<a class="btn btn-default disabled" href="#">
+			<a class="btn btn-default" href="{{ route('seguros.index') }}">
 				<span class="glyphicon glyphicon-th-list"></span>
 			</a>
 		</div>
-		<h4 class="list-group-item-heading"><a href="#" class="disabled">Seguros</a></h4>
+		<h4 class="list-group-item-heading"><a href="{{ route('seguros.index') }}">Seguros</a></h4>
 		<p class="list-group-item-text">Lista, agrega, edita o elimina seguros del sitio...</p>
 	</div>
 

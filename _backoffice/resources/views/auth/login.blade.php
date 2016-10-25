@@ -41,9 +41,9 @@
                         <div class="form-group">
                             <div class="col-md-7 col-md-offset-3">
                                 <div class="checkbox">
-                                    <label>
+                                   <!--  <label>
                                         <input type="checkbox" name="remember"> Recordar este equipo
-                                    </label>
+                                    </label> -->
                                 </div>
                             </div>
                         </div>

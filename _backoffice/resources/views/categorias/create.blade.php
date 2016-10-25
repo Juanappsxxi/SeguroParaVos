@@ -51,6 +51,8 @@
 
 			<div class="form-group">
 			    {!! Form::label('icono', 'Ícono:', ['class' => 'control-label']) !!}
+			    
+			    &nbsp;
 			    <button
                  data-iconset="fontawesome"
                  data-icon="fa-hand-o-up"
@@ -66,7 +68,9 @@
                  role="iconpicker">
                 </button>
 
-            	<input type="checkbox" id="estado" name="estado" checked="">
+				&nbsp;
+				<label>Estado:</label>
+            	<input type="checkbox" id="estado" name="estado">
                 <label for="estado">&nbsp;</label>
 
                 <!-- <input type="checkbox" id="estado" name="estado">
