@@ -30,16 +30,22 @@
 				Atrás
 			</a>
 
-			<button type="submit" class="btn btn-primary">
+			<button type="submit" class="btn btn-primary save">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
 				Guardar
 			</button>
 		</div>
 
 		<div class="panel-body">
-			<div class="form-group">
-			    {!! Form::label('nombre', 'Nombre:', ['class' => 'control-label']) !!}
-			    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+			<div class="row">
+				<div class="col-md-3 form-group">
+				    {!! Form::label('nombre', 'Nombre:', ['class' => 'control-label']) !!}
+				    {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
+				</div>
+				<div class="col-md-9 form-group">
+					{!! Form::label('descripcion', 'Descripción breve:', ['class' => 'control-label']) !!}
+				    {!! Form::text('descripcion', null, ['class' => 'form-control']) !!}
+				</div>
 			</div>
 
 			<div class="row">
@@ -115,7 +121,8 @@
 					<br>
 					<div class="row">
 						<div class="col-xs-12">
-							<select name="unidad_cobertura"
+							<select
+							 name="unidad_cobertura"
 							 id="unidad_cobertura"
 							 class="selectpicker">
 							 	<option value="null">Selecciona cobertura</option>
@@ -128,13 +135,148 @@
 
 				<div class="col-md-3 form-group">
 					{!! FORM::label('aseguradora', 'Aseguradora:', ['class' => 'control-label']) !!}
-					<select name="aseguradora"
+					<select
+					 name="aseguradora"
 					 id="aseguradora"
 					 class="selectpicker">
 					 	<option value="null">Selecciona aseguradora</option>
 					 	<option value="mapfre">Mapfre</option>
 					 	<option value="uruguay-asistencia">Uruguay Asistencia</option>
 					</select>
+				</div>
+			</div>
+			<!--
+			coberturas
+			premio_anual
+			-->
+			<div class="row">
+				<div class="col-md-12 form-group">
+					{!! FORM::label('coberturas', 'Descripción de cobertura', ['class' => 'control-label']) !!}
+					<p>* Tabla de características de la cobertura</p>
+					<textarea
+					 name="coberturas"
+					 id="coberturas"
+					 data-type="table"
+					 class="form-control hidden"></textarea>
+					<style>
+						.table.textarea-table span {
+							display: block;
+							box-sizing: border-box;
+							width: 100%;
+							min-height: 30px;
+							line-height: 30px;
+							padding: 0 10px;
+							border: 1px solid #ddd;
+							background: #fff;
+						}
+						.table.textarea-table span.table-row-actions {
+							background: none;
+							border: none;
+							text-align: center;
+						}
+					</style>
+					<table id="table-coberturas" class="textarea-table table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Nombre de la propiedad</th>
+								<th>Atributo de la propiedad</th>
+								<th>
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-plus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Agregar fila"></a>
+									</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row-template hidden">
+								<td class="col-md-5"><span class="table-field" contenteditable="true"></span></td>
+								<td class="col-md-5"><span class="table-value" contenteditable="true"></span></td>
+								<td class="col-md-1 col-md-offset-1">
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-minus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Eliminar fila"></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="col-md-5"><span class="table-field" contenteditable="true"></span></td>
+								<td class="col-md-5"><span class="table-value" contenteditable="true"></span></td>
+								<td class="col-md-1 col-md-offset-1">
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-minus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Eliminar fila"></a>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 form-group">
+					{!! FORM::label('premio_anual', 'Descripción de premio anual a pagar', ['class' => 'control-label']) !!}
+					<p>* Tabla de los premios anuales</p>
+					<textarea
+					 name="premio_anual"
+					 id="premio_anual"
+					 data-type="table"
+					 class="form-control hidden"></textarea>
+					<table id="table-premio_anual" class="textarea-table table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Nombre de la propiedad</th>
+								<th>Atributo de la propiedad</th>
+								<th>
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-plus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Agregar fila"></a>
+									</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row-template hidden">
+								<td class="col-md-5"><span class="table-field" contenteditable="true"></span></td>
+								<td class="col-md-5"><span class="table-value" contenteditable="true"></span></td>
+								<td class="col-md-1 col-md-offset-1">
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-minus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Eliminar fila"></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="col-md-5"><span class="table-field" contenteditable="true"></span></td>
+								<td class="col-md-5"><span class="table-value" contenteditable="true"></span></td>
+								<td class="col-md-1 col-md-offset-1">
+									<span class="table-row-actions">
+										<a href="#"
+										 class="btn glyphicon glyphicon-minus"
+										 data-toggle="tooltip"
+										 data-placement="left"
+										 title="Eliminar fila"></a>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 
@@ -146,7 +288,7 @@
 		</div>
 
 		<div class="panel-footer">
-			<button type="submit" class="btn btn-primary">
+			<button type="submit" class="btn btn-primary save">
 				<span class="glyphicon glyphicon-floppy-disk"></span>
 				Guardar
 			</button>

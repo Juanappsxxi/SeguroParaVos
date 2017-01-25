@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1><h1><span class="glyphicon glyphicon-list-alt"></span> Categorías guardadas</h1>
+<h1><span class="glyphicon glyphicon-list-alt"></span> Categorías guardadas</h1>
 <p class="lead">Aquí están todas las categorías guardadas. <a href="{{ route('categorias.create') }}">Agregar una nueva</a></p>
 
 <hr>

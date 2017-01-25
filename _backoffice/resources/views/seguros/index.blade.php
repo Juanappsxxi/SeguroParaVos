@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1><h1><span class="glyphicon glyphicon-list-alt"></span> Seguros guardados</h1>
+<h1><span class="glyphicon glyphicon-list-alt"></span> Seguros guardados</h1>
 <p class="lead">Aquí están todas los seguros guardados. <a href="{{ route('seguros.create') }}">Agregar uno nuevo</a></p>
 
 <hr>

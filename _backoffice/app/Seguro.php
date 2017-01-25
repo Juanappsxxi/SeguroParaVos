@@ -17,7 +17,11 @@ class Seguro extends Model
         'pago',
         'valor_cobertura',
         'unidad_cobertura',
+        'descripcion',
+        'coberturas',
+        'premio_anual',
         'aseguradora',
+        'descripcion',
         'estado'
     ];
 

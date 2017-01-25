@@ -104,3 +104,17 @@ label:hover:before {}
 .input-group .input-group-addon.percent {
   display: none;
 }
+
+div.alert {
+  border-radius: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 51px;
+  text-align: center;
+  z-index: 10;
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+  width: 100%;
+}

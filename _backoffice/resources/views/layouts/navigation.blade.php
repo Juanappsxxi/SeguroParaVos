@@ -18,9 +18,9 @@
 				Seguros
 			</a>
 		</li>
-		<li role="presentation" class="disabled {{ isset($classes_atributos) ? $classes_atributos : '' }}">
-			<a href="#">
-				<span class="glyphicon glyphicon-lock"></span>
+		<li role="presentation" class="{{ isset($classes_atributos) ? $classes_atributos : '' }}">
+			<a href="{{ route('atributos.index') }}">
+				<span class="glyphicon glyphicon-th"></span>
 				Atributos
 			</a>
 		</li>

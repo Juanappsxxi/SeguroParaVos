@@ -46,7 +46,7 @@
 			    {!! Form::label('caracteristicas', 'Características:', ['class' => 'control-label']) !!}
 			    <p><small>Escribe las características separadas por coma: <em><strong>Ejemplo 1, ejemplo 2</strong></em></small></p>
 			    <p><small>Para agregar segunda línea a una característica, escribe entre paréntesis rectos: <em>Ejemplo 1 <strong>[Segunda línea]</strong>, Ejemplo 2</em></small></p>
-			    {!! Form::textarea('caracteristicas', null, ['class' => 'form-control']) !!}
+			    {!! Form::text('caracteristicas', null, ['class' => 'form-control']) !!}
 			</div>
 
 			<div class="form-group">

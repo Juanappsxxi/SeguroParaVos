@@ -28,23 +28,31 @@ Route::get('/seguros/{seguros}/delete', [
 	'uses' => 'SeguroController@delete'
 ]);
 
+Route::resource('atributos', 'AtributoController');
+Route::get('/atributos/{atributos}/delete', [
+	'as' => 'atributos.delete',
+	'uses' => 'AtributoController@delete'
+]);
+
 // Authentication Routes...
 Route::get('login', [
 	'as' => 'login',
 	'uses' => 'Auth\AuthController@showLoginForm'
 ]);
+
 Route::post('login', [
 	'as' => 'post.login',
 	'uses' => 'Auth\AuthController@login'
 ]);
+
 Route::get('logout', [
 	'as' => 'logout',
 	'uses' => 'Auth\AuthController@logout'
 ]);
 
 // Registration Routes...
-// Route::get('register', 'Auth\AuthController@showRegistrationForm');
-// Route::post('register', 'Auth\AuthController@register');
+Route::get('__private_register', 'Auth\AuthController@showRegistrationForm');
+Route::post('__private_register', 'Auth\AuthController@register');
 
 // Password Reset Routes...
 Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');

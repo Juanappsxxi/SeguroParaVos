@@ -104,13 +104,11 @@ class CategoriaController extends Controller
 		]);
 
 		$input = $request->all();
-
-		$input = $request->all();
 		$input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
 
 		$categoria->fill($input)->save();
 
-		Session::flash('flash_message', 'Row successfully edited!');
+		Session::flash('flash_message', 'La categoría se a modificado con éxito!');
 
 		return redirect()->back();
 	}
@@ -139,7 +137,7 @@ class CategoriaController extends Controller
 
 	    $categoria->delete();
 
-	    Session::flash('flash_message', 'Row successfully deleted!');
+	    Session::flash('flash_message', 'La categoría se ha eliminado con éxito!');
 
 	    return redirect()->route('categorias.index');
 	}

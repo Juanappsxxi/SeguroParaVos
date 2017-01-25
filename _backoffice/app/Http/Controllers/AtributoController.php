@@ -6,15 +6,16 @@ use Illuminate\Http\Request;
 
 use Session;
 use App\Http\Requests;
-use App\Categoria;
+use App\Atributo;
 use App\Seguro;
 
-class SeguroController extends Controller
+class AtributoController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -22,8 +23,9 @@ class SeguroController extends Controller
      */
     public function index()
     {
-        $seguros = Seguro::all();
-        return view('seguros.index', ['seguros' => $seguros, 'classes_seguros' => 'active']);
+        $atributos = Atributo::all();
+        
+        return view('atributos.index', ['atributos' => $atributos, 'classes_atributos' => 'active']);
     }
 
     /**
@@ -33,14 +35,12 @@ class SeguroController extends Controller
      */
     public function create()
     {
-        $categorias = Categoria::all();
         $seguros = Seguro::all();
         
         return view(
-            'seguros.create',
+            'atributos.create',
             [
-                'seguros' => $seguros,
-                'categorias' => $categorias
+                'seguros' => $seguros
             ]
         );
     }
@@ -54,21 +54,22 @@ class SeguroController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'nombre' => 'required',
-            'categoria' => 'required',
-            'pago' => 'required',
-            'valor_cobertura' => 'required',
-            'unidad_cobertura' => 'required',
-            'aseguradora' => 'required'
+            'atributo' => 'required',
+            'tipo' => 'required',
+            'adhiere' => 'required',
+            'cubre' => 'required'
         ]);
 
         $input = $request->all();
-        $input['porcentaje'] = isset ($input['porcentaje']) && $input['porcentaje'] == 'on' ? 1 : 0;
+        $seguros_arr = $request->get('aplicacion');
+        $seguros = implode(',', $seguros_arr ? $seguros_arr : []);
+
+        $input['aplicacion'] = $seguros;
         $input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
 
-        Seguro::create($input);
+        Atributo::create($input);
 
-        Session::flash('flash_message', 'El seguro se ha creado con éxito!');
+        Session::flash('flash_message', 'El atributo se ha creado con éxito!');
 
         return redirect()->back();
     }
@@ -81,8 +82,8 @@ class SeguroController extends Controller
      */
     public function show($id)
     {
-        $seguro = Seguro::findOrFail($id);
-        return view('seguros.show', ['seguro' => $seguro]);
+        $atributo = Atributo::findOrFail($id);
+        return view('atributos.show', ['atributo' => $atributo]);
     }
 
     /**
@@ -93,15 +94,19 @@ class SeguroController extends Controller
      */
     public function edit($id)
     {
-        $seguro = Seguro::findOrFail($id);
-        $categorias = Categoria::all();
+        $atributo = Atributo::findOrFail($id);
         $seguros = Seguro::all();
+        $seguros_sel = explode(',', $atributo->aplicacion);
+
+        // var_dump($seguros_sel);
+        // exit;
+
         return view(
-            'seguros.edit',
+            'atributos.edit',
             [
-                'seguro' => $seguro,
+                'atributo' => $atributo,
                 'seguros' => $seguros,
-                'categorias' => $categorias
+                'seguros_sel' => $seguros_sel
             ]
         );
     }
@@ -115,24 +120,25 @@ class SeguroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $seguro = Seguro::findOrFail($id);
+        $atributo = Atributo::findOrFail($id);
 
         $this->validate($request, [
-            'nombre' => 'required',
-            'categoria' => 'required',
-            'pago' => 'required',
-            'valor_cobertura' => 'required',
-            'unidad_cobertura' => 'required',
-            'aseguradora' => 'required'
+            'atributo' => 'required',
+            'tipo' => 'required',
+            'adhiere' => 'required',
+            'cubre' => 'required'
         ]);
 
         $input = $request->all();
-        $input['porcentaje'] = isset ($input['porcentaje']) && $input['porcentaje'] == 'on' ? 1 : 0;
+        $seguros_arr = $request->get('aplicacion');
+        $seguros = implode(',', $seguros_arr ? $seguros_arr : []);
+
+        $input['aplicacion'] = $seguros;
         $input['estado'] = isset ($input['estado']) && $input['estado'] == 'on' ? 1 : 0;
 
-        $seguro->fill($input)->save();
+        $atributo->fill($input)->save();
 
-        Session::flash('flash_message', 'El seguro se ha modificado con éxito!');
+        Session::flash('flash_message', 'El atributo se ha modificado con éxito!');
 
         return redirect()->back();
     }
@@ -145,8 +151,8 @@ class SeguroController extends Controller
      */
     public function delete($id)
     {
-        $seguro = Seguro::findOrFail($id);
-        return view('seguros.delete')->withSeguro($seguro);
+        $atributo = Atributo::findOrFail($id);
+        return view('atributos.delete')->withAtributo($atributo);
     }
 
     /**
@@ -157,12 +163,12 @@ class SeguroController extends Controller
      */
     public function destroy($id)
     {
-        $seguro = Seguro::findOrFail($id);
+        $atributo = Atributo::findOrFail($id);
 
-        $seguro->delete();
+        $atributo->delete();
 
-        Session::flash('flash_message', 'El seguro se ha eliminado con éxito!');
+        Session::flash('flash_message', 'El atributo se ha eliminado con éxito!');
 
-        return redirect()->route('seguros.index');
+        return redirect()->route('atributos.index');
     }
 }
